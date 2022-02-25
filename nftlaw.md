@@ -200,7 +200,25 @@ NFT](https://www.washingtonpost.com/technology/2022/02/22/expunge-his-daughters-
 of TV video footage depicting his daughter's murder. Parker was apparently
 advised that creating an NFT would give him enough of a copyright in the footage
 to have it removed from sites like Facbook and YouTube. But copyright does not
-work that way.
+work that way. The television station that filmed the footage owns the
+copyright. Parker can't change that by minting an NFT of it.
+
+Another related myth of NFTs is that minting one helps enforce copyright against
+infringers. The Associated Press's Director of Blockchain, for example, has
+[argued](https://twitter.com/fr_brennan/status/1497262530112237569) that
+creating NFTs of some of its photographs would make it easier to make
+unauthorized users take them down. But copyrights come from copyright law, not
+from the blockchain. The process to file a copyright lawsuit or a [DMCA takedown
+notice](https://en.wikipedia.org/wiki/Notice_and_take_down#United_States) isn't
+made any easier by having an NFT of the work.  To be sure, in a web3 future
+where absolutely everything is on the blockchain and nothing is possible unless
+it is approved by a blockchain transaction, it would be technically impossible
+to post a photograph without an explicit license from the copyright owner. But
+first, that world is not the world of today, and second, a world where speech is
+impossible without advance permission would be profoundly dystopian and run
+completely against the values of freedom and openness that blockchain is
+supposed to stand for.
+
 
 ## Copyright Transfers Are Hard ##
 
