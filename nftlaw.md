@@ -506,7 +506,8 @@ derivative works needs to deal with**. Otherwise, NFT owners and their business
 partners may be unpleasantly surprised by the results. Everyone who does a
 project based on an NFT that does not answer these questions is putting an
 immense amount of faith in the courts to get things right if the deal goes sour
-and the parties end up suing each other.
+and the parties end up suing each other. (And blockchain advocates are not
+generally known for their faith in the courts to get things right.)
 
 We are not saying that there is a best solution for all projects. (This is one
 reason among many that we are not providing our own proposed license text.) What
@@ -540,5 +541,7 @@ law](https://www.harvardmagazine.com/2000/01/code-is-law-html), then these
 licenses are buggy code. Responsible NFT creators would not launch a project
 built atop a smart-contract library that had known unpatched vulnerabilities.
 They should bring the same care to the legal code on which they depend, because
-otherwise the results could be [just as catastrophic](https://web3isgoinggreat.com).
+otherwise the results could be [just as
+catastrophic](https://web3isgoinggreat.com). Whatever you think about NFTs,
+launching them with broken copyright licenses doesn't do anyone any good.
 
