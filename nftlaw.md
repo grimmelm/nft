@@ -430,7 +430,7 @@ own](https://scholarship.law.upenn.edu/penn_law_review/vol165/iss2/2/) when they
 "buy" content online, cannot be taken at face value.)
 
 The second problem is that this term does not play nicely with downstream
-transfers. Consider Alice and Woodchuck Labs again. Suppose that Suppose that
+transfers. Consider Alice and Woodchuck Labs again. Suppose that
 Alice owns WoodChucker number 12345. She allows Fern, a a filmmaker, to create a
 video series based on WoodChucker 12345. Those videos are derivative works under
 copyright law and Fern  has their own copyright in the videos. Now Alice decides
