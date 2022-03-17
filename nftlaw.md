@@ -77,7 +77,7 @@ on-chain asset (the NFT). (In theory, at least. [Some legal
 scholars](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3928901) are
  skeptical about whether tethering actually works.)
 
-Thus, there are actually three diffrent kinds of assets involved in an NFT.
+Thus, there are actually three different kinds of assets involved in an NFT.
 Yes, three.
 
 First, there is an **NFT** itself on the blockchain. It looks like this:
@@ -149,7 +149,7 @@ not) the copyright.
 Back to NFTs. It should be apparent now that an NFT can be tethered to a
 creative work in one of two ways. First, it could be used to control a _copy_
 of the work: just like whoever owns the Tungsten Cube NFT is entitled to possession
-of the tungsten cube, whoever owns the Physical Copy NFT is entitled to posess
+of the tungsten cube, whoever owns the Physical Copy NFT is entitled to possess
 a specific copy of the work. Second, it could be used to control the _copyright_
 in the work: whoever owns the Intangible Copyright NFT is now entitled to decide
 who gets to make new copies. The two could go together, _but they don't have to_.
@@ -323,7 +323,7 @@ who explicitly agree to them.
 
 True, Alice has has invoked an ERC-721 smart contract ```transferFrom()```
 method to transfer the Bored Ape to Bob and applied her cryptographic signature
-to the smart contract transfering the NFT to Bob. But that method is a 
+to the smart contract transferring the NFT to Bob. But that method is a 
 _smart-contract_ term, not a _legal-contract_ term. The smart contract 
 doesn't say anything about copyright or link to the BAYC terms. Even
 if it did, there would be no guarantee that Alice had read or even knew about
@@ -336,7 +336,7 @@ Getting from smart contract to legally binding terms is a
 [subtle](https://scholarship.law.georgetown.edu/cgi/viewcontent.cgi?article=3451&context=facpub)
  problem. Adding in off-chain assets like tungsten cubes and copyrights into the mix makes
 it even harder. Changing ownership of these assets requires off-chain effects,
-but since smart contracts exist on the blockchain, it is entrely possible to
+but since smart contracts exist on the blockchain, it is entirely possible to
 interact with them without ever invoking any additional contract terms. If
 copyright in an NFT-linked artwork is based on a legal contract, users who deal
 only with the smart contract have a decent argument that nothing in the legal
@@ -356,7 +356,7 @@ to each successive NFT owner.
 
 At first glance, this looks more complicated, because now the creator must deal
 directly with every NFT owner, rather than just with the first owner. But it has
-a subjstantial advantage, which is that copyright licenses don't need to be
+a substantial advantage, which is that copyright licenses don't need to be
 signed the way that copyright transfers do.  (Indeed, they don't even need to be
 [in writing](https://scholar.google.com/scholar_case?case=9695307318571874997),
 although for any economically serious transactions, writing down the terms is
@@ -423,7 +423,7 @@ The first problem here is that this license grant is inconsistent with the
 statement, just two paragraphs above in the BAYC terms, that "[w]hen you
 purchase an NFT, **you own the underlying Bored Ape, the Art, completely**." If
 Alice really does "own" the art "completely," then Yuga Labs has nothing left to
-give and the commercial-use license is superflous. (This is another sign that
+give and the commercial-use license is superfluous. (This is another sign that
 the statement that Bored Ape NFT owners "own" the artwork, like many other
 claims about [what users actually
 own](https://scholarship.law.upenn.edu/penn_law_review/vol165/iss2/2/) when they
@@ -464,7 +464,7 @@ So maybe the licenses ought to travel with the NFT itself. This happens all the
 time with real estate. If Alice owns a parcel of land and grants Telecorp an
 "easement" to run a fiber-optic cable under one corner of her land, the easement
 will still exist after Alice sells the land to Bob. It is said to "bind the
-owner's sucessors" or to "run with the land." That is the easement is attached
+owner's successors" or to "run with the land." That is the easement is attached
 to and limits (or "burdens") the legal right to the land itself. It is not just
 a personal promise from Alice to Telecorp. When Bob buys the land from Alice, he
 steps into her shoes. He succeeds not just to her rights in the land (e.g. to
@@ -506,7 +506,7 @@ derivative works they have already created. This is how copyright law [deals
 with](https://scholar.google.com/scholar_case?case=6610856779804662857) some
 license terminations, including most famously the film rights to _Rear Window_.
 Or if Fern's license continues, what should happen to any royalties that Fern
-has promised to pay Alice? Should Bob suceed to those too? There are arguments
+has promised to pay Alice? Should Bob succeed to those too? There are arguments
 in favor, and arguments against.
 
 Our point is just that **these are issues that an NFT license allowing
@@ -519,7 +519,7 @@ generally known for their faith in the courts to get things right.)
 
 We are not saying that there is a best solution for all projects. (This is one
 reason among many that we are not providing our own proposed license text.) What
-is right for the Bored Apes may not be right for an NFT project based aroud
+is right for the Bored Apes may not be right for an NFT project based around
 musical works, or on a literary work. Instead, we think that NFT creators need
 to think about these issues, discuss them with their communities, and then
 communicate clearly how copyright licenses will work in relation to the NFTs.
@@ -529,7 +529,7 @@ communicate clearly how copyright licenses will work in relation to the NFTs.
 ## Conclusion ##
 
 It is clear that many NFT projects are  _designed_ to transfer copyrights along
-with onwership of the NFT itself. This is a core design goal, on the same level
+with ownership of the NFT itself. This is a core design goal, on the same level
 as creating compelling content and making transfers irrevocable. Despite this,
 many projects seem to have put far less thought into the legal aspects of their
 designs than into the technical and artistic ones.
