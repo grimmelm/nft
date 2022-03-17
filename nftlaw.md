@@ -316,7 +316,7 @@ its head. Bob might try to argue that Alice has agreed to the BAYC terms, which
 make him the copyright owner. But Alice hasn't! As far as she's concerned, the
 BAYC terms are just a bunch of words on a website somewhere.  The copyright
 system wasn't created with digital tokens in mind and doesn't know about them.
-As far as it's concerned, Alice owns the Bored Ape copyright and hasn't done
+As far as it's concerned, Alice owns the Woodchucker copyright and hasn't done
 anything to give up ownership. Legal contracts typically only bind the people
 who explicitly agree to them. 
 
