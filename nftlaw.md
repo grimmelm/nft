@@ -63,16 +63,17 @@ blockchain using the [ERC-1155](https://eips.ethereum.org/EIPS/eip-1155)
 standard. If Alice buys the tungsten cube NFT from TungstenDAO, the physical
 cube will still be sitting in Willowbrook, Illinois.
 
-Althugh the Tungsten Cube NFT is not the _same_ as the physical tungsten cube,
+Although the Tungsten Cube NFT is not the _same_ as the physical tungsten cube,
 the two are _connected_. According to the "Description" provided by TungstenDAO
 to OpenSea when it created the NFT listing, when Alice acquires the NFT, she is
 also entitled to "One visit to see/photograph/touch the cube per calendar year."
-If she burns the NFT, she is entitled to receive physical possession of the cube
-"via freight truck." If she sells the NFT to Bob, then Bob will be entitled to
-visit the cube once a year, or to burn the NFT and receive the cube. Some
-lawyers call this connectiong "tethering": rights in an off-chain asset (the
-physical cube) are linked by an invisible tether to an on-chain asset (the NFT).
-(In theory, at least. [Some legal
+If Alice sends the NFT to a special address that prevents anyone from ever 
+controlling the NFT again (a process called burning), she is entitled to receive
+physical possession of the cube "via freight truck." If she sells the NFT to 
+Bob, then Bob will be entitled to visit the cube once a year, or to burn the NFT
+and receive the cube. Some lawyers call this connection "tethering": rights in 
+an off-chain asset (the physical cube) are linked by an invisible tether to an 
+on-chain asset (the NFT). (In theory, at least. [Some legal
 scholars](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3928901) are
  skeptical about whether tethering actually works.)
 
@@ -81,8 +82,12 @@ Yes, three.
 
 First, there is an **NFT** itself on the blockchain. It looks like this:
 
-XXX TK/YJ XXX
-XXX illustration of code / transaction XXX
+![Tungsten cube NFT mint transaction](minting_code.png)
+
+You can view the creation of this NFT online on the Etherscan blockchain 
+explorer
+[here](https://etherscan.io/tx/0x3feb5cbee8aae8abde269e46ca3061da5c4c1bbe1b0fa42f665c2e15f55c7c7d)
+.
 
 Second, there is the **physical cube** in a warehouse. It looks like this:
 
@@ -117,7 +122,7 @@ copies at all, like when one person tells another person a story. The point is
 that a creative work is not the same as any of the copies that embody it.
 
 Thus, the **copyright** in a creative work behaves differently than ownership
-of a physical object, like a tungsten cube. The owher of the cube can move it,
+of a physical object, like a tungsten cube. The owner of the cube can move it,
 sculpt it, or melt it down; if someone else does any of these, they violate the
 owner's property rights. But the owner of a copyright isn't necessarily the owner
 of any specific copies. If Alice buys a copy of Bob's novel, Alice owns the
@@ -133,7 +138,7 @@ adaptation of Bob's novel -- in copyright terminology, a
 [work](https://www.law.cornell.edu/uscode/text/17/103) -- she needs Bob's
 permission. She can get it in one of two ways. Either she can buy the copyright
 outright from Bob -- a **transfer** of ownership -- or Bob can retain the
-copyright and give Alice a **license** to make the movie. The diffrence is that
+copyright and give Alice a **license** to make the movie. The difference is that
 if Alice becomes the new owner via transfer, she can now decide whether to
 authorize other uses, like graphic novels and action figures. If Bob merely
 gives Alice a license, he retains the authority to decide how else to use (or
@@ -157,7 +162,6 @@ public display offline. But they never had, and couldn't tokenize, ownership of
 the copyright in the underlying creative works. The copyright in _Dune_ the novel is still held by [Frank Herbert's estate](https://variety.com/2016/film/news/legendary-dune-frank-herbert-1201923648/), which licensed
 film rights to Legendary Entertainment, which produced the 2021 film version; the copyrights in the 
 artwork in the pitch book is held by [the original artists](https://www.buzzfeednews.com/article/amansethi/spicedao-dunedao-soby) and their estates.
-Frank Herbert's estate
 
 Another failure mode for NFT copies is that copyright law has an unintuitive
 concept of _what counts as a copy_. We have been talking about obviously
@@ -196,17 +200,20 @@ to use the artwork or to stop others from using it.
 
 Some popular NFT projects, including the
 [CryptoPunks](https://www.larvalabs.com/cryptopunks), have been released with no
-explicit copyright terms. (LarvaLabs later went back and tried to retroactively add
+explicit copyright terms. (the creator, Larva Labs, later went back and tried to retroactively add
 a copyright license; some legal scholars are
 [skeptical](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3978963) whether
 this works.) This is legally risky for all concerned. An adversary could
 approach the NFT creator, buy out the copyright to the artwork, and then sue NFT
 purchasers for infringement if they put the images in their profile pictures, on
-OpenSea listngs, etc. This is not the intent of the creators and purchasers, and
-we hope that courts would not cooperate in a copyright-based rugpull like this,
+OpenSea listings, etc. This is not the intent of the creators and purchasers, and
+we hope that courts would not cooperate in a copyright-based attack like this,
 but without clarity around the copyright rights of NFT owners, there is a risk
 that it could happen. (The courts are not known for their nuanced understanding
 of cutting-edge blockchain technologies and community norms.)
+
+(Tyler note: do we want to make mention of Yuga's relicensing of cryptopunks  
+in the above paragraph?)
 
 Even more blatantly, some NFTs create copyright trouble by using artworks [stolen from
 artists](https://hyperallergic.com/702309/artists-say-plagiarized-nfts-are-plaguing-their-community/),
@@ -215,7 +222,7 @@ with](https://slate.com/technology/2022/02/hitpiece-nfts-crypto-music-controvers
 and no license from. Copying these works as part of the NFT marketing (e.g. for
 OpenSea listings)  can be copyright
 infringement. In addition, an NFT creator could be engaged in false advertising by 
-implying that NFT owners will receive rights in these stolen works. Indeed,  
+implying that NFT owners will receive rights in these stolen works. Indeed,
 because copyright infringement is "strict liability," NFT owners who make
 copies of stolen art could also be liable for infringement, even if they
 were misled by the NFT creator into thinking that it was properly licensed.
@@ -227,7 +234,7 @@ the work. One particularly tragic example is Andy Williams, who [created an
 NFT](https://www.washingtonpost.com/technology/2022/02/22/expunge-his-daughters-murder-internet-father-created-an-nft-grisly-video/)
 of TV video footage depicting his daughter's murder. Parker was apparently
 advised that creating an NFT would give him enough of a copyright in the footage
-to have it removed from sites like Facbook and YouTube. But copyright doesn't
+to have it removed from sites like Facebook and YouTube. But copyright doesn't
 work that way. The television station that filmed the footage owns the
 copyright. Parker can't change that by minting an NFT of it.
 
@@ -238,7 +245,7 @@ creating NFTs of some of its photographs would make it easier to make
 unauthorized users take them down. But copyrights come from copyright law, not
 from the blockchain. The process to file a copyright lawsuit or a [DMCA takedown
 notice](https://en.wikipedia.org/wiki/Notice_and_take_down#United_States) isn't
-made any easier by having an NFT of the work.  To be sure, in a web3 future
+made any easier by having an NFT of the work.  To be sure, in a Web3 future
 where absolutely everything is on the blockchain and nothing is possible unless
 it is approved by a blockchain transaction, it would be technically impossible
 to post a photograph without an explicit license from the copyright owner. But
@@ -306,33 +313,33 @@ Without a signed transfer, Alice still owns the copyright, not Bob.
 
 This is where the difference between smart contracts and legal contracts rears
 its head. Bob might try to argue that Alice has agreed to the BAYC terms, which
-make him the copyright owner. But Alice hasn't! As far as she's concnered, the
+make him the copyright owner. But Alice hasn't! As far as she's concerned, the
 BAYC terms are just a bunch of words on a website somewhere.  The copyright
-system wasn't created with ERC-20 tokens in mind and doesn't know about them. As
-far as it's concerned, Alice owns the Bored Ape copyright and hasn't done
+system wasn't created with digital tokens in mind and doesn't know about them.
+As far as it's concerned, Alice owns the Bored Ape copyright and hasn't done
 anything to give up ownership. Legal contracts typically only bind the people
 who explicitly agree to them. 
 
-True, Alice has has invoked an ERC-20 smart contract ```transfer()``` method to
-transfer the Bored Ape to Bob and applied her cryptographic signature to the
-smart contract transfering the NFT to Bob. But that method is a _smart-contract_
-term, not a _legal-contract_ term. The smart contract (XXX TK/YJ link to source
-code XXX) doesn't say anything about copyright or link to the BAYC terms. Even
+True, Alice has has invoked an ERC-721 smart contract ```transferFrom()```
+method to transfer the Bored Ape to Bob and applied her cryptographic signature
+to the smart contract transfering the NFT to Bob. But that method is a 
+_smart-contract_ term, not a _legal-contract_ term. The smart contract 
+(XXX TK/YJ link to source code XXX tyler: there is no source code this is an abstract example. Unless you want to reference the smart contract in the tungsten cube example...) doesn't say anything about copyright or link to the BAYC terms. Even
 if it did, there would be no guarantee that Alice had read or even knew about
 those terms. She would not have attached her cryptographic signature to a
 transaction "attached to or logically associated with a \[legal\] contract ...
 **with the intent to sign**" it in a legally binding sense. 
 
 Getting from smart contract to legally binding terms is a
-[hard](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3297425)
-[subtle](https://scholarship.law.georgetown.edu/cgi/viewcontent.cgi?article=3451&context=facpub) and
+[hard](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3297425) and
+[subtle](https://scholarship.law.georgetown.edu/cgi/viewcontent.cgi?article=3451&context=facpub)
  problem. Adding in off-chain assets like tungsten cubes and copyrights into the mix makes
 it even harder. Changing ownership of these assets requires off-chain effects,
 but since smart contracts exist on the blockchain, it is entrely possible to
 interact with them without ever invoking any additional contract terms. If
 copyright in an NFT-linked artwork is based on a legal contract, users who deal
 only with the smart contract have a decent argument that nothing in the legal
-contract applies to them, since they interacted with the smart contract.
+contract applies to them, since they only interacted with the smart contract.
 
 
 ## An Alternative: Copyright Licenses ##
@@ -352,7 +359,7 @@ a subjstantial advantage, which is that copyright licenses don't need to be
 signed the way that copyright transfers do.  (Indeed, they don't even need to be
 [in writing](https://scholar.google.com/scholar_case?case=9695307318571874997),
 although for any economically serious transactions, writing down the terms is
-mush safer.) Carol and Woodchuck Labs don't need to rely on Alice and Bob to get
+much safer.) Carol and Woodchuck Labs don't need to rely on Alice and Bob to get
 the signed-transfers right. Instead, Woodchuck Labs can simply write its terms
 so that it directly gives a license to every NFT owner _automatically_ as soon
 as they acquire the NFT.
@@ -373,7 +380,7 @@ license](https://creativecommons.org/licenses/by/4.0/legalcode) says:
 from the Licensor to exercise the Licensed Rights under the terms and
 conditions of this Public License.
 
-A clear example of this aproach in the NFT space is the
+A clear example of this approach in the NFT space is the
 [RTFKT](https://rtfkt.com/tos) license, which states:
 
 >1 ... Any digital works of authorship or other content made available through
@@ -437,7 +444,7 @@ Alice sells to Bob, and Fern becomes a copyright infringer if they continue to
 show the videos! This is terrible from Fern's perspective, having invested time
 and money into making the videos. It's also terrible from Alice's perspective,
 because Fern ought to be very reluctant to pay money to license Alice's rights
-if Alice can always rugpull by selling the NFT to Bob. So this solution
+if Alice can always back out by selling the NFT to Bob. So this solution
 effectively makes the derivative work rights unmarketable.
 
 Another answer would be that Fern's license continues in full force. Bob has no
@@ -479,8 +486,8 @@ carved up the copyright, and in effect kept a slice for herself. If Bob is in
 the NFT market, he will have to investigate the entire chain of title of the NFT
 he is buying to make sure that no Alices before him have quietly given away part
 of the copyright. This need for investigation runs contrary to the crypto ethos
-that as much as possible should be don in public and on-chain. So maybe exclusive
-licenses entered into by one owner should _not_ run with the NFT.
+that as much as possible should be done in public and on-chain. So maybe 
+exclusive licenses entered into by one owner should _not_ run with the NFT.
 
 So far, we have enumerated three different possibilities for what happens when
 Alice sells the NFT to Bob:
@@ -491,7 +498,7 @@ Alice sells the NFT to Bob:
    
 It is possible to imagine a court adopting any of these three outcomes. Indeed,
 there is no clear consensus as to which of these is the best solution in
-general. (The three of us don't even agree!) Even worse, these don't even
+general. (The three authors of this blog post don't even agree!) Even worse, these don't even
 exhaust the possibilities. A fourth possibility is that Fern's license to create
 _new_ derivative works terminates, but that they can continue to use _existing_
 derivative works they have already created. This is how copyright law [deals
@@ -528,7 +535,7 @@ designs than into the technical and artistic ones.
 
 We think this is a major mistake. The legal infrastructure on which blockchains
 run is just as complicated and full of traps for the unwary as the technical
-infrastructure. While some cryptocurrency and web3 projects are intended to
+infrastructure. While some cryptocurrency and Web3 projects are intended to
 escape the existing legal system, or to replace it entirely, the same is not
 true of many creative NFT projects. They are intended to work within the legal
 system as it currently exists, to allow people to create new and interesting art
