@@ -91,12 +91,12 @@ explorer
 
 Second, there is the **physical cube** in a warehouse. It looks like this:
 
-<img src="cube.gif" height="300px" alt="Tungsten cube">
+<img src="cube.gif" height="240px" alt="Tungsten cube">
 
 Third, there is the **legal right** to control the physical cube. It looks like
 this, because legal rights are intangible and have no physical existence:
 
-<img src="blank.gif" height="300px" alt="Blank space">
+<img src="blank.gif" height="240px" alt="Blank space">
 
 If everything works correctly, the legal right is what links the on-chain
 NFT to the off-chain cube. The current owner of the NFT is able to
