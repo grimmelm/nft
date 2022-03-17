@@ -200,10 +200,7 @@ to use the artwork or to stop others from using it.
 
 Some popular NFT projects, including the
 [CryptoPunks](https://www.larvalabs.com/cryptopunks), have been released with no
-explicit copyright terms. (the creator, Larva Labs, later went back and tried to retroactively add
-a copyright license; some legal scholars are
-[skeptical](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3978963) whether
-this works.) This is legally risky for all concerned. An adversary could
+explicit copyright terms. This is legally risky for all concerned. An adversary could
 approach the NFT creator, buy out the copyright to the artwork, and then sue NFT
 purchasers for infringement if they put the images in their profile pictures, on
 OpenSea listings, etc. This is not the intent of the creators and purchasers, and
@@ -212,8 +209,12 @@ but without clarity around the copyright rights of NFT owners, there is a risk
 that it could happen. (The courts are not known for their nuanced understanding
 of cutting-edge blockchain technologies and community norms.)
 
-(Tyler note: do we want to make mention of Yuga's relicensing of cryptopunks  
-in the above paragraph?)
+Following the initial CryptoPunks launch, its creator, Larva Labs, later went back and tried to retroactively add
+a copyright license. Some legal scholars are
+[skeptical](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3978963) whether
+this works. Even more recently Yuga Labs [acquired the rights](https://www.larvalabs.com/blog/2022-3-11-18-0/yuga-labs-acquires-cryptopunks-and-meebits) to the CryptoPunks and announced its intention to grant commercial rights to token owners. While 
+many CryptoPunks owners will welcome this change, changing license terms after the initial
+launch and minting is trickier than granting them up front.
 
 Even more blatantly, some NFTs create copyright trouble by using artworks [stolen from
 artists](https://hyperallergic.com/702309/artists-say-plagiarized-nfts-are-plaguing-their-community/),
@@ -324,7 +325,7 @@ True, Alice has has invoked an ERC-721 smart contract ```transferFrom()```
 method to transfer the Bored Ape to Bob and applied her cryptographic signature
 to the smart contract transfering the NFT to Bob. But that method is a 
 _smart-contract_ term, not a _legal-contract_ term. The smart contract 
-(XXX TK/YJ link to source code XXX tyler: there is no source code this is an abstract example. Unless you want to reference the smart contract in the tungsten cube example...) doesn't say anything about copyright or link to the BAYC terms. Even
+doesn't say anything about copyright or link to the BAYC terms. Even
 if it did, there would be no guarantee that Alice had read or even knew about
 those terms. She would not have attached her cryptographic signature to a
 transaction "attached to or logically associated with a \[legal\] contract ...
