@@ -1,0 +1,60 @@
+The IC3 NFT License (the "License") grants you certain intellectual property rights with respect to Licensed Material associated with an NFT. When you acquire the NFT, you own the personal property rights to the token underlying the NFT (e.g., the right to freely sell, transfer, or otherwise dispose of that  NFT), but you do not own the associated Licensed Material. Instead, the Licensor grants you a specified limited license to use the Licensed Material, as set forth below:
+
+
+Definitions
+
+"Adapted Material" means material subject to copyright and similar rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the copyright and similar rights held by the Licensor. For purposes of this License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image. For purposes of this License, the exact reproduction of the Licensed Material in a different medium in a manner not requiring original creative effort (such as printing a photographic or pictorial work on paper) des not produce Adapted Material.
+
+"Commercial" means primarily intended for or directed towards commercial advantage or monetary compensation. For purposes of this License, activity is Commercial if direct or indirect payment is required as a condition of access to the Licensed Material or Adapted Material. For purposes of this License, the sale and advertising for sale of the License NFT (including the rights granted under this License) is not Commercial.
+
+The Digital System is a blockchain, database, or other digital system, which is capable of associating an identifier with an individual or entity who has the exclusive power to exercise effective control over the disposition and use of the identifier within that system by means of a cryptographic key controlled by that person or entity.
+
+"License" means the intellectual property license granted under the terms of this document.
+
+"Licensed Material" means the creative work or other material to which the License NFT is Linked.
+
+The "Licensor" means the individual or entity that causes an NFT to Invoke this License.
+
+The "License NFT" is the NFT that Invokes this License. If more than one NFT Invokes this License, each such NFT is a separate License NFT resulting in a separate and distinct license grant with respect to the Licensed Material respectively associated with each such NFT.
+
+An NFT "Invokes" this License when the NFT refers to the verbatim text of this License by means of a Licensing Process.
+
+A "Licensing Process" is a technical process (including Ethereum Improvement Protocol XXX or any update, revision, new version, or successor thereof) designed to allow authorized parties to specify the current status of intellectual property license terms associated with an NFT and any related material, including the text of a license. A Licensing Process can (but need not) specify whether the license has been sublicensed, transferred, and/or revoked.
+
+ 
+An NFT is "Linked" to material when the NFT contains, in a form which is substantially immutable in the ordinary course of operation of the digital system, a description of or hyperlink to that material.
+
+"NFT" means a unique digital identifier, maintained on or in a Digital System.
+
+"Non-Commercial" means not Commercial.
+
+The "Owner" of an NFT is the individual or entity who is entitled to exercise control over its disposition and use under the property laws of the relevant jurisdiction.
+
+An NFT "Revokes" this License when the NFT indicates that it has been revoked by means of a Licensing Process.
+
+An NFT is "Sublicened" when the NFT indicates that it has been sublicensed by means of a Licensing Process.
+
+To "Transfer" an NFT is to change, modify, or update the Digital System such that the identity of the Owner of that NFT changes, by any legally sufficient means, including sale, barter, gift, bequest, or operation of law. 
+
+To "Use" the Licensed Material is to copy, display, distribute, make available to the public, or perform it.
+
+"You" are the person receiving rights under this License as the Owner of the License NFT.
+
+
+License Grant
+
+Subject to the terms and conditions of this License, and for as for as long as You are the Owner of the License NFT, the Licensor hereby grants to You a worldwide, royalty-free, sublicensable, non-exclusive, license:
+* to Use the Licensed Material [If NC: for Non-Commercial purposes only],
+* [If D] to create and Use Adapted Material [If NC: for Non-Commercial purposes only],
+* to Use the Licensed Material in connection with the sale and advertising for sale of the License NFT,
+* to identify You as the Owner of the License NFT.
+
+This License becomes effective when the Licensor causes the License NFT to Invoke it. Because this is a unilateral license grant and not a contract, your assent is not required for it to become effective.
+
+This license grant is non-transferable, except that if the License NFT is Transferred, your rights under this license grant will terminate, and such rights will automatically transfer to the new Owner of the License NFT. Any sublicenses granted hereunder that are Sublicensed will continue in force as sublicenses from the new Owner.
+
+If the License NFT Revokes this License, your rights under this license grant will terminate, along with all sublicenses granted hereunder.
+
+
+
+BOILERPLATE
