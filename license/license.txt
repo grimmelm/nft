@@ -21,7 +21,6 @@ An NFT "Invokes" this License when the NFT refers to the verbatim text of this L
 
 A "Licensing Process" is a technical process (including Ethereum Improvement Protocol XXX or any update, revision, new version, or successor thereof) designed to allow authorized parties to specify the current status of intellectual property license terms associated with an NFT and any related material, including the text of a license. A Licensing Process can (but need not) specify whether the license has been sublicensed, transferred, and/or revoked.
 
- 
 An NFT is "Linked" to material when the NFT contains, in a form which is substantially immutable in the ordinary course of operation of the digital system, a description of or hyperlink to that material.
 
 "NFT" means a unique digital identifier, maintained on or in a Digital System.
@@ -54,6 +53,11 @@ This License becomes effective when the Licensor causes the License NFT to Invok
 This license grant is non-transferable, except that if the License NFT is Transferred, your rights under this license grant will terminate, and such rights will automatically transfer to the new Owner of the License NFT. Any sublicenses granted hereunder that are Sublicensed will continue in force as sublicenses from the new Owner.
 
 If the License NFT Revokes this License, your rights under this license grant will terminate, along with all sublicenses granted hereunder.
+
+
+Interpretation
+
+By adopting this License, the Licensor intends to enhance the clarity and predictability of intellectual-property licensing via digital transactions. In cases of doubt or ambiguity, the terms of this license should be interpreted and applied to promote the goals of (1) making the information in the Digital System accurately reflect the licensing relationships it describes, and vice versa, (2) providing clear, simple, and unambiguous mechanisms for parties to express their licensing intentions, (3) protecting parties from duress, fraud, forgery, and mistake, and (4) achieving uniformity and consistency in the application of this License to different transactions, at different times, and in different jurisdictions.
 
 
 
