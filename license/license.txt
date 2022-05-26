@@ -3,41 +3,61 @@ The IC3 NFT License (the "License") grants you certain intellectual property rig
 
 Definitions
 
-"Adapted Material" means material subject to copyright and similar rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the copyright and similar rights held by the Licensor. For purposes of this License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image. For purposes of this License, the exact reproduction of the Licensed Material in a different medium in a manner not requiring original creative effort (such as printing a photographic or pictorial work on paper) des not produce Adapted Material.
+	Ledgers and NFTs:
 
-"Commercial" means primarily intended for or directed towards commercial advantage or monetary compensation. For purposes of this License, activity is Commercial if direct or indirect payment is required as a condition of access to the Licensed Material or Adapted Material. For purposes of this License, the sale and advertising for sale of the License NFT (including the rights granted under this License) is not Commercial.
+		A "Unique Identifier" is information that is sufficient to distinguish one digital record from other digital records.
+		
+		A "Ledger" is a blockchain, database, or other digital system that records information about Unique Identifiers.
+		
+		A "Private Key" is a cryptographic key, the use of which is necessary to modify the information about a Unique Identifier recorded in a Ledger.
+		
+		A "Unique Identifier" in a Ledger is "Associated" with a person or entity when that person or entity has substantially exclusive control over the Private Key necessary to modify the information about that Unique Identifier in that Ledger.
+		
+		An "NFT" is a Unique Identifier in a Ledger that is Associated with a person or entity.
+		
+		The "Controller" of an NFT is the person or entity with whom the NFT is Associated.
 
-The Digital System is a blockchain, database, or other digital system, which is capable of associating an identifier with an individual or entity who has the exclusive power to exercise effective control over the disposition and use of the identifier within that system by means of a cryptographic key controlled by that person or entity.
+	Licensing
 
-"License" means the intellectual property license granted under the terms of this document.
+		"License" means the intellectual property license granted under the terms of this document.
 
-"Licensed Material" means the creative work or other material to which the License NFT is Linked.
+		A "Licensing Process" is a technical process (including a smart contract that implements Ethereum Improvement Protocol XXX or any update, revision, new version, or successor thereof) designed to allow authorized parties to specify the current status of intellectual property license terms associated with an NFT and any related material, including the text of a license. A Licensing Process can (but need not) specify whether the license has been sublicensed, transferred, and/or revoked.
 
-The "Licensor" means the individual or entity that causes an NFT to Invoke this License.
+		An NFT "Invokes" this License when the NFT refers to the verbatim text of this License by means of a Licensing Process.
+		
+		The "Licensor" means the individual or entity that causes an NFT to Invoke this License.
+		
+		The "License NFT" is the NFT that Invokes this License. If more than one NFT Invokes this License, each such NFT is a separate License NFT resulting in a separate and distinct license grant with respect to the Licensed Material respectively associated with each such NFT.
 
-The "License NFT" is the NFT that Invokes this License. If more than one NFT Invokes this License, each such NFT is a separate License NFT resulting in a separate and distinct license grant with respect to the Licensed Material respectively associated with each such NFT.
 
-An NFT "Invokes" this License when the NFT refers to the verbatim text of this License by means of a Licensing Process.
+	Licensed and Adapted Material
 
-A "Licensing Process" is a technical process (including Ethereum Improvement Protocol XXX or any update, revision, new version, or successor thereof) designed to allow authorized parties to specify the current status of intellectual property license terms associated with an NFT and any related material, including the text of a license. A Licensing Process can (but need not) specify whether the license has been sublicensed, transferred, and/or revoked.
+		An NFT is "Linked" to material when the NFT contains, in a form which is substantially immutable in the ordinary course of operation of the digital system, a description of, or hyperlink to that material.
 
-An NFT is "Linked" to material when the NFT contains, in a form which is substantially immutable in the ordinary course of operation of the digital system, a description of or hyperlink to that material.
+		"Licensed Material" means the creative work or other material to which the License NFT is Linked.
 
-"NFT" means a unique digital identifier, maintained on or in a Digital System.
+		"Adapted Material" means material subject to copyright and similar rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the copyright and similar rights held by the Licensor. For purposes of this License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image. For purposes of this License, the exact reproduction of the Licensed Material in a different medium in a manner not requiring original creative effort (such as printing a photographic or pictorial work on paper) does not produce Adapted Material.
 
-"Non-Commercial" means not Commercial.
+		"Commercial" means primarily intended for or directed towards commercial advantage or monetary compensation. For purposes of this License, activity is Commercial if direct or indirect payment is required as a condition of access to the Licensed Material or Adapted Material. For purposes of this License, the sale and advertising for sale of the License NFT (including the rights granted under this License) is not Commercial.
 
-The "Owner" of an NFT is the individual or entity who is entitled to exercise control over its disposition and use under the property laws of the relevant jurisdiction.
+		"Non-Commercial" means not Commercial.
 
-An NFT "Revokes" this License when the NFT indicates that it has been revoked by means of a Licensing Process.
+		To "Use" material is to copy, display, distribute, make available to the public, or perform it.
 
-An NFT is "Sublicened" when the NFT indicates that it has been sublicensed by means of a Licensing Process.
 
-To "Transfer" an NFT is to change, modify, or update the Digital System such that the identity of the Owner of that NFT changes, by any legally sufficient means, including sale, barter, gift, bequest, or operation of law. 
+	Ownership and Transfers
 
-To "Use" the Licensed Material is to copy, display, distribute, make available to the public, or perform it.
+		The "Owner" of an NFT is the person or entity who is entitled to be its Controller  property laws of the relevant jurisdiction.
+		
+		"You" are the person receiving rights under this License as the Owner of the License NFT.
 
-"You" are the person receiving rights under this License as the Owner of the License NFT.
+		An NFT "Revokes" this License when the NFT indicates that it has been revoked by means of a Licensing Process.
+
+		An NFT is "Sublicened" when the NFT indicates that it has been sublicensed by means of a Licensing Process.
+
+		To "Transfer" an NFT is to change, modify, or update the Ledger such that the identity of the Owner of that NFT changes, by any legally sufficient means, including sale, barter, gift, bequest, or operation of law. 
+
+
 
 
 License Grant
