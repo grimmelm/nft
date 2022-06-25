@@ -1,5 +1,6 @@
 \documentclass{article}
 
+\usepackage{hyperref}
 \usepackage{libertine}
 
 \title{The IC3 NFT License}
@@ -19,7 +20,7 @@ The IC3 License links an NFT with a copyright license to use a creative work. Th
 
 \subsection{Introduction}
 
-The IC3 License has been specifically designed to work with blockchain-based NFTs, e.g. with smart contracts that implement the standard defined in [EIP-721](https://eips.ethereum.org/EIPS/eip-721). But it is not restricted to blockchain-based NFTs. The license uses the technology-neutral term "Ledger" to refer to the system that records information about NFTs and their owners. The license can be used with any underlying technology as long as it (1) supports persistent unique identifiers to serve as NFTs, (2) associates those NFTs with specific owners, (3) allows the owner of an NFT to control the it with a cryptographic key, and (4) allows an NFT to be linked to a creative work. This system can be widely distributed (like a public blockchain), moderately distributed (like a private blockchain), or fully centralized (like a database with a single administrator). Use of the IC3 License for other kinds of licensing is strongly discouraged.
+The IC3 License has been specifically designed to work with blockchain-based NFTs, e.g. with smart contracts that implement the standard defined in \href{https://eips.ethereum.org/EIPS/eip-721}{EIP-721}. But it is not restricted to blockchain-based NFTs. The license uses the technology-neutral term "Ledger" to refer to the system that records information about NFTs and their owners. The license can be used with any underlying technology as long as it (1) supports persistent unique identifiers to serve as NFTs, (2) associates those NFTs with specific owners, (3) allows the owner of an NFT to control the it with a cryptographic key, and (4) allows an NFT to be linked to a creative work. This system can be widely distributed (like a public blockchain), moderately distributed (like a private blockchain), or fully centralized (like a database with a single administrator). Use of the IC3 License for other kinds of licensing is strongly discouraged.
 
 The IC3 License has also been specifically designed to work with NFTs that implement the interface defined in EIP-XXX. This is a general smart contract interface that provides modular support for common features in copyright licensing, including transfer, sublicensing, and revocation. The IC3 License can also be used with NFTs that implement the generic NFT interface defined in EIP-721, or with other NFTs, but the EIP-XXX interface is recommended to reduce ambiguity about when there has been a transfer, sublicense, or revocation.
 
@@ -91,9 +92,9 @@ The IC3 NFT License (the "License") grants you certain intellectual property rig
 
 
 
-\subsection{Definitions}
+\paragraph{Definitions}
 
-	Ledgers and NFTs:
+	\subparagraph{Ledgers and NFTs}:
 
 	\begin{itemize}
 	\item	A "Unique Identifier" is information that is sufficient to distinguish one digital record from other digital records.
@@ -109,7 +110,7 @@ The IC3 NFT License (the "License") grants you certain intellectual property rig
 	\item	The "Controller" of an NFT is the person or entity with whom the NFT is Associated.
 	\end{itemize}
 
-	Licensing
+	\subparagraph{Licensing}
 
 	\begin{itemize}	
 	\item	"Copyright and Similar Rights" means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and sui generis database rights, without regard to how the rights are labeled or categorized.
@@ -128,7 +129,7 @@ The IC3 NFT License (the "License") grants you certain intellectual property rig
 		
 	\end{itemize}
 		
-	Licensed and Adapted Material
+	\subparagraph{Licensed and Adapted Material}
 
 	\begin{itemize}
 	
@@ -146,7 +147,7 @@ The IC3 NFT License (the "License") grants you certain intellectual property rig
 
 	\end{itemize}
 
-	Ownership and Transfers
+	\subparagraph{Ownership and Transfers}
 
 	\begin{itemize}
 	
@@ -164,14 +165,14 @@ The IC3 NFT License (the "License") grants you certain intellectual property rig
 
 
 
-License Grant
+\paragraph{License Grant}
 
 Subject to the terms and conditions of this License, and for as for as long as You are the Owner of the License NFT, the Licensor hereby grants to You a worldwide, royalty-free, sublicensable, non-exclusive, license to exercise the Licensed Rights to:
 \begin{itemize}
 \item Use the Licensed Material [If Non-Commercial: for Non-Commercial purposes only],
-[\item If Derivatives: create and Use Adapted Material [If Non-Commercial: for Non-Commercial purposes only],]
+\item {[}If Derivatives: create and Use Adapted Material [If Non-Commercial: for Non-Commercial purposes only],]
 \item Use the Licensed Material in connection with the sale and advertising for sale of the License NFT,
-\item identify You as the Owner of the License NFT.
+\item Identify You as the Owner of the License NFT.
 \end{itemize}
 This License becomes effective when the Licensor causes the License NFT to Invoke it. Because this is a unilateral license grant and not a contract, Your assent is not required for it to become effective.
 
@@ -182,14 +183,14 @@ This license grant is non-transferable, except that if the License NFT is Transf
 
 
 
-Interpretation
+\paragraph{Interpretation}
 
 By adopting this License, the Licensor intends to enhance the clarity and predictability of intellectual-property licensing via digital transactions. In cases of doubt or ambiguity, the terms of this license should be interpreted and applied to promote the goals of (1) making the information in the Digital System accurately reflect the licensing relationships it describes, and vice versa, (2) providing clear, simple, and unambiguous mechanisms for parties to express their licensing intentions, (3) protecting parties from duress, fraud, forgery, and mistake, and (4) achieving uniformity and consistency in the application of this License to different transactions, at different times, and in different jurisdictions.
 
 
 
 
-Disclaimer of Warranties and Limitation of Liability.
+\paragraph{Disclaimer of Warranties and Limitation of Liability}
 
 Unless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.
 
