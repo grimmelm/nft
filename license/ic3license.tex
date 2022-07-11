@@ -7,7 +7,11 @@
 \author{James Grimmelmann}
 \date{\today}
 
-\newcommand{\eiplicense}{EIP-XXX~}
+\usepackage{xspace}
+
+\newcommand{\eiplicense}{EIP-XXX\xspace}
+
+\usepackage{semantic-markup}
 
 \newcommand{\sect}[1]{\vspace{12pt}\noindent{\strong{#1}}}
 \newcommand{\subsect}[1]{\vspace{12pt}\noindent{\em{#1}}}
@@ -20,11 +24,11 @@ The IC3 License links an NFT with a copyright license to use a creative work. Th
 
 \section{Introduction}
 
-The IC3 License has been specifically designed to work with blockchain-based NFTs, e.g. with smart contracts that implement the standard defined in \href{https://eips.ethereum.org/EIPS/eip-721}{EIP-721}. But it is not restricted to blockchain-based NFTs. The license uses the technology-neutral term "Ledger" to refer to the system that records information about NFTs and their owners. The license can be used with any underlying technology as long as it:
+The IC3 License has been specifically designed to work with blockchain-based NFTs, e.g. with smart contracts that implement the standard defined in \href{https://eips.ethereum.org/EIPS/eip-721}{EIP-721}. But it is not restricted to blockchain-based NFTs. The license uses the technology-neutral term ``Ledger'' to refer to the system that records information about NFTs and their owners. The license can be used with any underlying technology as long as it:
 \begin{enumerate}
 \item Supports persistent unique identifiers to serve as NFTs, 
 \item Associates those NFTs with specific owners,
-\item Allows the owner of an NFT to control the it with a cryptographic key, and 
+\item Allows the owner of an NFT to control it with a cryptographic key, and 
 \item Allows an NFT to be linked to a creative work. 
 \end{enumerate}
 This system can be widely distributed (like a public blockchain), moderately distributed (like a private blockchain), or fully centralized (like a database with a single administrator). Use of the IC3 License for other kinds of licensing is strongly discouraged.
@@ -40,9 +44,9 @@ Standard techniques used by lawyers to create binding terms of use for websites 
 
 But a blockchain does not have a checkbox or even a website. Someone who receives an EIP-721 NFT need not have done anything at all. They may never have visited the NFT sponsor's website, or even know about this. This means that any promises by the \emph{licensee} in a license contract are  illusory. Licensor has no guarantee that a downstream NFT owner has actually agreed to the license terms. Thus, the IC3 License does not give the licensee any duties, so there is no need for them to agree to anything.
 
-On the other hand, the IC3 License does attempt to ensure that the \emph{licensor} has clearly indicated their intent to be bound by the license terms. It does so by saying that the license becomes effective when the licensor "Invokes" it through a "Licensing Process," i.e., uses a technical process to connect an NFT with the IC3 License. This definition includes (but is not limited to) the \eiplicense interface. 
+On the other hand, the IC3 License does attempt to ensure that the \emph{licensor} has clearly indicated their intent to be bound by the license terms. It does so by saying that the license becomes effective when the licensor ``Invokes'' it through a ``Licensing Process,'' i.e., uses a technical process to connect an NFT with the IC3 License. This definition includes (but is not limited to) the \eiplicense interface. 
 
-The essential idea of \eiplicense  is to make it explicit when a licensor intends to create a copyright license. Any smart contract that has effects \emph{other} than creating a license runs the risk that courts might hold that the licensor activated it for those other effects, rather than to create a license. By removing all such other effects, the \eiplicense interface strengthens the inference that the licensor specifically intende to create a license. (If you do not want to create a license, do not invoke an \eiplicense method.)
+The essential idea of \eiplicense  is to make it explicit when a licensor intends to create a copyright license. Any smart contract that has effects \emph{other} than creating a license runs the risk that courts might hold that the licensor activated it for those other effects, rather than to create a license. By removing all such other effects, the \eiplicense interface strengthens the inference that the licensor specifically intends to create a license. (If you do not want to create a license, do not invoke an \eiplicense method.)
 
 
 \section{License Terms}
@@ -51,11 +55,11 @@ The actual license grant is the least important part of the IC3 License! We have
 
 Drawing on the success of the Creative Commons license suite, the IC3 License can be customized to be either Commercial or NonCommercial (C vs. NC), and to allow Derivative works or to specify No Derivative works (D vs. ND). These two options can be set independently, for a total of four variations. We did not include a Creative Commons-style ShareAlike option for derivative works. A licensor who is interested in establishing a shared pool of creative works should use an open license that lets anyone make derivative works (such as the CC BY-SA license or the GPL), rather than a license tied to an NFT.
 
-The IC3 License applies to "Licensed Material" that is "Linked" to an NFT. The definition of Licensed Material is deliberately broad: it can include highly creative works like images or videos, but it also includes "other material" to include datasets, software, or other works that are not primarily artistic. The definition of Linked is also broad: it can be by hyperlink, by description, or through a hash value. What is important is that the NFT must be connected to specific licensed material in a way that cannot change over time. We do not attempt to solve the (very difficult) problems of creating a technical standard or a license for an NFT whose contents can change over time.
+The IC3 License applies to ``Licensed Material'' that is ``Linked'' to an NFT. The definition of Licensed Material is deliberately broad: it can include highly creative works like images or videos, but it also includes ``other material'' to include datasets, software, or other works that are not primarily artistic. The definition of Linked is also broad: it can be by hyperlink, by description, or through a hash value. What is important is that the NFT must be connected to specific licensed material in a way that cannot change over time. We do not attempt to solve the (very difficult) problems of creating a technical standard or a license for an NFT whose contents can change over time.
 
-The core license grant in the IC3 License is that the owner can "Use" the licensed material, i.e. exercise all of the usual rights under copyright to make copies of the work and share them with the public. This is an unlimited grant: it covers all media, digital and analog, on-chain and off-chain. If the license is NonCommercial, it excludes any uses directed to "commercial advantage or monetary compensation," which includes any cases in which people are required to pay to get a copy of the work. Whether the license is Commercial or NonCommercial, no royalties are required.
+The core license grant in the IC3 License is that the owner can ``Use'' the licensed material, i.e. exercise all of the usual rights under copyright to make copies of the work and share them with the public. This is an unlimited grant: it covers all media, digital and analog, on-chain and off-chain. If the license is NonCommercial, it excludes any uses directed to ``commercial advantage or monetary compensation,'' which includes any cases in which people are required to pay to get a copy of the work. Whether the license is Commercial or NonCommercial, no royalties are required.
 
-If the licensor chooses to allow derivative works, then the license grant also allows the owner to use "Adapted Material," which uses language from the Creative Commons license suite to define what counts as a derivative work. To reflect the customs of the NFT community, we added language to make clear that simply reproducing the work in a different medium -- e.g., printing T-shirts of a JPEG -- doesn't count as making a derivative work. Only new projects -- such as modifying artwork, remixing a song, or making a TV series based on a character -- are derivative works.
+If the licensor chooses to allow derivative works, then the license grant also allows the owner to use ``Adapted Material,'' which uses language from the Creative Commons license suite to define what counts as a derivative work. To reflect the customs of the NFT community, we added language to make clear that simply reproducing the work in a different medium -- e.g., printing T-shirts of a JPEG -- doesn't count as making a derivative work. Only new projects -- such as modifying artwork, remixing a song, or making a TV series based on a character -- are derivative works.
 
 Regardless of which license option is used, all versions of the IC3 License include two specific uses that are always allowed. First, the material can be used to sell the NFT, e.g. on an OpenSea listing. This is an essential part of truth in advertising; someone considering buying the NFT typically needs to be able to see what creative work they will actually be getting. A similar clause is present in many other NFT licenses, although we have attempted to generalize it so that it is less tied to the specifics of how any particular NFT marketplace works. Second, the IC3 License generally allows free use of the material to identify the owner publicly, e.g. in a Twitter profile hexagon. This too is widespread in the NFT community and widely allowed by other NFT licenses.
 
@@ -64,14 +68,14 @@ Regardless of which license option is used, all versions of the IC3 License incl
 
 The IC3 License tries to deal sensibly with the many complications that can arise due to the free transferability of NFTs. Most existing NFT licenses have not taken this possibility seriously, even though it is arguably the defining characteristic of NFTs and the one that makes them most appealing to users.
 
-The first major issue is that NFTs can be, and frequently are, stolen. A hacker or phisher gains access to an NFT owner's private key and uses it to transfer the NFT to themself, frequently turning around and immediately reselling it. Under these circumstances, should the \emph{copyright} license stay with the previous owner of the NFT, or go to the new owner? There are at least three possible answers a license could take:
+The first major issue is that NFTs can be, and frequently are, stolen. A hacker or phisher gains access to an NFT owner's private key and uses it to transfer the NFT to themselves, frequently turning around and immediately reselling it. Under these circumstances, should the \emph{copyright} license stay with the previous owner of the NFT, or go to the new owner? There are at least three possible answers a license could take:
 \begin{enumerate}
 \item The license follows the NFT. The old owner's license terminates, and the new owner receives a license. This approach makes the blockchain reliable and authoritative, but it also makes it difficult for NFT owners to commercialize derivative works of their NFTs unless they take extreme security measures.
 \item The license stays with the true owner of the NFT according to property law. This approach makes the blockchain non-authoritative and can require additional investigation on the part of buyers and licensees, but it protects NFT owners against theft, fraud, and duress.
 \item The license defines its own rules and specifies the circumstances under which it does and does not transfer. This approach allows for fine-tuning, but at the cost of decreased compatibility with both the blockchain and with the legal system.
 \end{enumerate}
 
-The IC3 license currently provides options (1) and (2), where (2) can be defined either under the law of a specific jurisdiction or without attempting to specify a jurisdiction. To keep the distinction clear, it uses the term "Controller" for the person who has control of an NFT via a private key, and "Owner" for the person who is legally entitled to the license. Option (1) is implemented by defining the Owner to be the Controller (so the two concepts are the same), and option (2) by defining the Owner to be the person "who is entitled to be its Controller" under relevant law.
+The IC3 license currently provides options (1) and (2), where (2) can be defined either under the law of a specific jurisdiction or without attempting to specify a jurisdiction. To keep the distinction clear, it uses the term ``Controller'' for the person who has control of an NFT via a private key, and ``Owner'' for the person who is legally entitled to the license. Option (1) is implemented by defining the Owner to be the Controller (so the two concepts are the same), and option (2) by defining the Owner to be the person ``who is entitled to be its Controller'' under relevant law.
 
 The IC3 License can be revoked, but it does not define the conditions under which it can be. This may seem paradoxical, but it reflects the design goal of making the license itself simple and modular. Instead, the license \emph{defers} to the smart contract that invoked it in the first place. If that contract says that the license has been revoked, it has been. The \eiplicense interface defines a generic revocation function, which the parties can plug into any smart contract they want to define the conditions under which the license terminates. That could be the simple passage of time, the unilateral choice of one of them, more complicated logic, or nothing. The point is that all of these options are equally compatible with the core license grant of the IC3 License, and thus they can all be outside its scope. Once again, the license is designed to work with the \eiplicense interface, but it is drafted so that any technical process serving the same function can be used instead.
 
@@ -94,7 +98,7 @@ The IC3 License concludes with a section advising courts on how to interpret it 
 
  \begin{sffamily} 
 
-The IC3 NFT License (the "License") grants you certain intellectual property rights with respect to Licensed Material associated with an NFT. When you acquire the NFT, you own the personal property rights to the token underlying the NFT (e.g., the right to freely sell, transfer, or otherwise dispose of that  NFT), but you do not own the associated Licensed Material. Instead, the Licensor grants you a specified limited license to use the Licensed Material, as set forth below:
+The IC3 NFT License (the ``License'') grants you certain intellectual property rights with respect to Licensed Material associated with an NFT. When you acquire the NFT, you own the personal property rights to the token underlying the NFT (e.g., the right to freely sell, transfer, or otherwise dispose of that  NFT), but you do not own the associated Licensed Material. Instead, the Licensor grants you a specified limited license to use the Licensed Material, as set forth below:
 
 \sect{Definitions}
 
@@ -102,35 +106,35 @@ The IC3 NFT License (the "License") grants you certain intellectual property rig
 
 
 	\begin{itemize}
-	\item	A "Unique Identifier" is information that is sufficient to distinguish one digital record from other digital records.
+	\item	A ``Unique Identifier'' is information that is sufficient to distinguish one digital record from other digital records.
 		
-	\item	A "Ledger" is a blockchain, database, or other digital system that records information about Unique Identifiers.
+	\item	A ``Ledger'' is a blockchain, database, or other digital system that records information about Unique Identifiers.
 		
-	\item	A "Private Key" is a cryptographic key, the use of which is necessary to modify the information about a Unique Identifier recorded in a Ledger.
+	\item	A ``Private Key'' is a cryptographic key, the use of which is necessary to modify the information about a Unique Identifier recorded in a Ledger.
 		
-	\item	A "Unique Identifier" in a Ledger is "Associated" with a person or entity when that person or entity has substantially exclusive control over the Private Key necessary to modify the information about that Unique Identifier in that Ledger.
+	\item	A ``Unique Identifier'' in a Ledger is ``Associated'' with a person or entity when that person or entity has substantially exclusive control over the Private Key necessary to modify the information about that Unique Identifier in that Ledger.
 		
-	\item	An "NFT" is a Unique Identifier in a Ledger that is Associated with a person or entity.
+	\item	An ``NFT'' is a Unique Identifier in a Ledger that is Associated with a person or entity.
 		
-	\item	The "Controller" of an NFT is the person or entity with whom the NFT is Associated.
+	\item	The ``Controller'' of an NFT is the person or entity with whom the NFT is Associated.
 	\end{itemize}
 
 	\subsect{Licensing}
 
 	\begin{itemize}	
-	\item	"Copyright and Similar Rights" means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and sui generis database rights, without regard to how the rights are labeled or categorized.
+	\item	``Copyright and Similar Rights'' means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and sui generis database rights, without regard to how the rights are labeled or categorized.
 
-	\item	"License" means the intellectual property license granted under the terms of this document.
+	\item	``License'' means the intellectual property license granted under the terms of this document.
 		
-	\item	"Licensed Rights" means the rights granted to You subject to the terms and conditions of this License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.
+	\item	``Licensed Rights'' means the rights granted to You subject to the terms and conditions of this License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.
 
-	\item	A "Licensing Process" is a technical process (including a smart contract that implements Ethereum Improvement Protocol XXX or any update, revision, new version, or successor thereof) designed to allow authorized parties to specify the current status of intellectual property license terms associated with an NFT and any related material, including the text of a license. A Licensing Process can (but need not) specify whether the license has been sublicensed, transferred, and/or revoked.
+	\item	A ``Licensing Process'' is a technical process (including a smart contract that implements Ethereum Improvement Protocol XXX or any update, revision, new version, or successor thereof) designed to allow authorized parties to specify the current status of intellectual property license terms associated with an NFT and any related material, including the text of a license. A Licensing Process can (but need not) specify whether the license has been sublicensed, transferred, and/or revoked.
 
-	\item	An NFT "Invokes" this License when the NFT refers to the verbatim text of this License by means of a Licensing Process.
+	\item	An NFT ``Invokes'' this License when the NFT refers to the verbatim text of this License by means of a Licensing Process.
 		
-	\item	The "Licensor" means the individual or entity that causes an NFT to Invoke this License.
+	\item	The ``Licensor'' means the individual or entity that causes an NFT to Invoke this License.
 		
-	\item	The "License NFT" is the NFT that Invokes this License. If more than one NFT Invokes this License, each such NFT is a separate License NFT resulting in a separate and distinct license grant with respect to the Licensed Material respectively associated with each such NFT.
+	\item	The ``License NFT'' is the NFT that Invokes this License. If more than one NFT Invokes this License, each such NFT is a separate License NFT resulting in a separate and distinct license grant with respect to the Licensed Material respectively associated with each such NFT.
 		
 	\end{itemize}
 		
@@ -138,17 +142,17 @@ The IC3 NFT License (the "License") grants you certain intellectual property rig
 
 	\begin{itemize}
 	
-	\item	An NFT is "Linked" to material when the NFT contains, in a form which is substantially immutable in the ordinary course of operation of the digital system, a description of, or hyperlink to that material.
+	\item	An NFT is ``Linked'' to material when the NFT contains, in a form which is substantially immutable in the ordinary course of operation of the digital system, a description of, or hyperlink to that material.
 
-	\item	"Licensed Material" means the creative work or other material to which the License NFT is Linked.
+	\item	``Licensed Material'' means the creative work or other material to which the License NFT is Linked.
 
-	\item "Adapted Material" means material subject to copyright and similar rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the copyright and similar rights held by the Licensor. For purposes of this License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image. For purposes of this License, the exact reproduction of the Licensed Material in a different medium in a manner not requiring original creative effort (such as printing a photographic or pictorial work on paper) does not produce Adapted Material.
+	\item ``Adapted Material'' means material subject to copyright and similar rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the copyright and similar rights held by the Licensor. For purposes of this License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image. For purposes of this License, the exact reproduction of the Licensed Material in a different medium in a manner not requiring original creative effort (such as printing a photographic or pictorial work on paper) does not produce Adapted Material.
 
-	\item	"Commercial" means primarily intended for or directed towards commercial advantage or monetary compensation. For purposes of this License, activity is Commercial if direct or indirect payment is required as a condition of access to the Licensed Material or Adapted Material. For purposes of this License, the sale and advertising for sale of the License NFT (including the rights granted under this License) is not Commercial.
+	\item	``Commercial'' means primarily intended for or directed towards commercial advantage or monetary compensation. For purposes of this License, activity is Commercial if direct or indirect payment is required as a condition of access to the Licensed Material or Adapted Material. For purposes of this License, the sale and advertising for sale of the License NFT (including the rights granted under this License) is not Commercial.
 
-	\item	"Non-Commercial" means not Commercial.
+	\item	``Non-Commercial'' means not Commercial.
 
-	\item	To "Use" material is to copy, display, distribute, make available to the public, or perform it.
+	\item	To ``Use'' material is to copy, display, distribute, make available to the public, or perform it.
 
 	\end{itemize}
 
@@ -156,15 +160,15 @@ The IC3 NFT License (the "License") grants you certain intellectual property rig
 
 	\begin{itemize}
 	
-	\item	 The "Owner" of an NFT is [OPTION 1: the person or entity who is legally entitled to be its Controller.][OPTION 2: its Controller.]
+	\item	 The ``Owner'' of an NFT is [OPTION 1: the person or entity who is legally entitled to be its Controller.][OPTION 2: its Controller.]
 		
-	\item	"You" and "Your" refer to the person receiving rights under this License as the Owner of the License NFT.
+	\item	``You'' and ``Your'' refer to the person receiving rights under this License as the Owner of the License NFT.
 
-	\item	An NFT "Revokes" this License when the NFT indicates that it has been revoked by means of a Licensing Process.
+	\item	An NFT ``Revokes'' this License when the NFT indicates that it has been revoked by means of a Licensing Process.
 
-	\item	An NFT is "Sublicened" when the NFT indicates that it has been sublicensed by means of a Licensing Process.
+	\item	An NFT is ``Sublicensed'' when the NFT indicates that it has been sublicensed by means of a Licensing Process.
 
-	\item	To "Transfer" an NFT is to change, modify, or update the Ledger such that the identity of the Owner of that NFT changes, by any legally sufficient means, including sale, barter, gift, bequest, or operation of law. 
+	\item	To ``Transfer'' an NFT is to change, modify, or update the Ledger such that the identity of the Owner of that NFT changes, by any legally sufficient means, including sale, barter, gift, bequest, or operation of law. 
 	
 	\end{itemize}
 
