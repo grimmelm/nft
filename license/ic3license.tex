@@ -3,9 +3,9 @@
 \usepackage{hyperref}
 \usepackage{libertine}
 
-\title{The IC3 NFT License}
+\title{The IC3 NFT License\\}
 \author{James Grimmelmann}
-\date{\today}
+\date{DISCUSSION DRAFT 1\\\today}
 
 \usepackage{xspace}
 
@@ -46,12 +46,14 @@ But a blockchain does not have a checkbox or even a website. Someone who receive
 
 On the other hand, the IC3 License does attempt to ensure that the \emph{licensor} has clearly indicated their intent to be bound by the license terms. It does so by saying that the license becomes effective when the licensor ``Invokes'' it through a ``Licensing Process,'' i.e., uses a technical process to connect an NFT with the IC3 License. This definition includes (but is not limited to) the \eiplicense interface. 
 
-The essential idea of \eiplicense  is to make it explicit when a licensor intends to create a copyright license. Any smart contract that has effects \emph{other} than creating a license runs the risk that courts might hold that the licensor activated it for those other effects, rather than to create a license. By removing all such other effects, the \eiplicense interface strengthens the inference that the licensor specifically intends to create a license. (If you do not want to create a license, do not invoke an \eiplicense method.)
+The essential idea of \eiplicense  is to make it explicit when a licensor intends to create a copyright license. This signal is clearest when the licensor takes an act that (a) says that it creates a license, and (b) does not do anything else. Signing a licensing contract on paper meets this test, because the paper says that it creates a license and the only reason to sign it is to create the license. \eiplicense is intended to be a smart-contract version of that piece of paper. 
+
+The IC3 License can be used with any smart contract or other technical process that meets the definition of a Licensing Process. It is not intended to be used on a website or other off-chain setting where the on-chain transactions do not link out to the license. It is also not recommended to use the IC3 License as part of a larger multi-step smart contract or process unless there is some individual step that meets the definition of a Licensing Process in which the licensor clearly indicates their intent to create a license.
 
 
 \section{License Terms}
 
-The actual license grant is the least important part of the IC3 License! We have tried to capture the most common and important use cases in light of the NFT community's responses to previous licenses. But our goal has been simplicity rather than perfection. If you want to tweak the IC3 License to meet your own needs, this is the part to tinker with.
+The actual license grant is the least important part of the IC3 License. We have tried to capture the most common and important use cases in light of the NFT community's responses to previous licenses. But our goal has been simplicity rather than perfection. If you want to tweak the IC3 License to meet your own needs, this is the part to tinker with.
 
 Drawing on the success of the Creative Commons license suite, the IC3 License can be customized to be either Commercial or NonCommercial (C vs. NC), and to allow Derivative works or to specify No Derivative works (D vs. ND). These two options can be set independently, for a total of four variations. We did not include a Creative Commons-style ShareAlike option for derivative works. A licensor who is interested in establishing a shared pool of creative works should use an open license that lets anyone make derivative works (such as the CC BY-SA license or the GPL), rather than a license tied to an NFT.
 
@@ -64,7 +66,7 @@ If the licensor chooses to allow derivative works, then the license grant also a
 Regardless of which license option is used, all versions of the IC3 License include two specific uses that are always allowed. First, the material can be used to sell the NFT, e.g. on an OpenSea listing. This is an essential part of truth in advertising; someone considering buying the NFT typically needs to be able to see what creative work they will actually be getting. A similar clause is present in many other NFT licenses, although we have attempted to generalize it so that it is less tied to the specifics of how any particular NFT marketplace works. Second, the IC3 License generally allows free use of the material to identify the owner publicly, e.g. in a Twitter profile hexagon. This too is widespread in the NFT community and widely allowed by other NFT licenses.
 
 
-\subsection{Transfer, Revocation, and Sublicensing}
+\section{Transfer, Revocation, and Sublicensing}
 
 The IC3 License tries to deal sensibly with the many complications that can arise due to the free transferability of NFTs. Most existing NFT licenses have not taken this possibility seriously, even though it is arguably the defining characteristic of NFTs and the one that makes them most appealing to users.
 
@@ -86,9 +88,11 @@ As with revocation, the IC3 License allows for a sublicense to be recorded on th
 Instead, the advantage of recording a sublicense on the blockchain is that it makes the sublicense transfer with the NFT. The IC3 License provides that all sublicenses that have been recorded this way carry over and remain as sublicenses from the new owner of the NFT. Someone who wants to make a substantial investment in an NFT -- e.g., a filmmaker creating a movie based on an NFT-licensed work -- can record this license using an \eiplicense smart contract. This puts everyone in the world (including potential buyers of the NFT) on notice of their sublicense and that it will carry over. (This is similar to how recording systems for copyrights and real property work, and the \eiplicense interface has been designed to make this notice straightforward.)   
 
 
-\section{Interpretation}
+\section{Boilerplate}
 
-The IC3 License concludes with a section advising courts on how to interpret it in the event of a dispute. Although the license itself does not force the copyright license to keep in sync with ownership on the blockchain, it advises courts that maintaining the reliability of blockchain records is an important goal, encouraging them to pick interpretations that make the blockchain a useful and authoritative source for understanding the status of a copyright license. In addition, the interpretation clause encourages courts to promote other common legal policies, such as fairness, uniformity, and predictability.
+The IC3 License includes a section advising courts on how to interpret it in the event of a dispute. Although the license itself does not force the copyright license to keep in sync with ownership on the blockchain, it advises courts that maintaining the reliability of blockchain records is an important goal, encouraging them to pick interpretations that make the blockchain a useful and authoritative source for understanding the status of a copyright license. In addition, the interpretation clause encourages courts to promote other common legal policies, such as fairness, uniformity, and predictability.
+
+The disclaimer of warranties and limitation of liability is based on the text of the Creative Commons license suite. These licenses are also intended to create licenses in members of the public (including people who may be unknown to the licensor), so their use cases are broadly similar. Several other clauses and definitions, including disclaimer at the start of the license text, are also adapted from language used in the Creative Commons licenses.
 
 
 
@@ -96,8 +100,9 @@ The IC3 License concludes with a section advising courts on how to interpret it 
 
 \section{License Text}
 
- \begin{sffamily} 
-
+\begin{sffamily} 
+ 
+\emph{The Institute for Cryptocurrencies and Contracts (IC3) is not a law firm and does not provide legal services or legal advice. Publication of the text of the IC3 License does not create a lawyer-client or other relationship. IC3 makes this text and related information available on an “as-is” basis. IC3 gives no warranties regarding this license, any material licensed under its terms and conditions, or any related information. IC3 disclaims all liability for damages resulting from their use to the fullest extent possible.}\\\\
 The IC3 NFT License (the ``License'') grants you certain intellectual property rights with respect to Licensed Material associated with an NFT. When you acquire the NFT, you own the personal property rights to the token underlying the NFT (e.g., the right to freely sell, transfer, or otherwise dispose of that  NFT), but you do not own the associated Licensed Material. Instead, the Licensor grants you a specified limited license to use the Licensed Material, as set forth below:
 
 \sect{Definitions}
