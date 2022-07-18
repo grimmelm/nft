@@ -1,16 +1,29 @@
 \documentclass{article}
 
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{libertine}
+\usepackage{authblk}
 
 \title{The \iccclicense\\}
 \author{James Grimmelmann}
+\affil{Cornell Tech and Cornell Law School\\Institute for Cryptocurrencies and Contracts}
 \date{DISCUSSION DRAFT 1\\\today}
 
 \usepackage{xspace}
 
 \newcommand{\eiplicense}{EIP-5218\xspace}
 \newcommand{\iccclicense}{IC3 NFT License\xspace}
+
+\newcommand{\keyword}[1]{\textbf{#1}\xspace}
+
+\newcommand{\commercial}{\keyword{Commercial}}
+\newcommand{\noncommercial}{\keyword{Non-Commercial}}
+
+\newcommand{\derivative}{\keyword{Derivatives}}
+\newcommand{\noderivative}{\keyword{No-Derivatives}}
+
+\newcommand{\ledger}{\keyword{Ledger-Authoritative}}
+\newcommand{\legal}{\keyword{Legal-Authoritative}}
 
 \usepackage{semantic-markup}
 
@@ -21,9 +34,25 @@
 
 \maketitle
 
-The \iccclicense links an NFT with a copyright license to use a creative work. The license travels with ownership of the NFT, so that when the NFT is transferred, so is the license. 
+\tableofcontents
 
 \section{Introduction}
+
+The \iccclicense is a copyright license specifically designed for use with NFTs. It links a creative work to an NFT so that when the NFT is transferred, so is the license. It is intended to be compatible with the NFT licensing standard defined in \eiplicense. 
+
+The \iccclicense has three optional features that a licensor can use or not when choosing a license:
+\begin{itemize}
+\item The license can be \commercial or \noncommercial. A \commercial license allows the user to make money from merchandise and other uses of the work; a \noncommercial license does not.
+\item The license can be \derivative or \noderivative. A \derivative license allows the user to make derivative works and adaptations, like remixes and video series; a \noderivative license does not.
+\item The license can be \ledger or \legal. A \ledger license means that the current state of the blockchain ledger is always authoritative for who owns the NFT and has rights under the license, even if the NFT is stolen or transferred by mistake. A \legal license gives the courts flexibility to correct ownership of the license in clear cases of theft and fraud.
+\end{itemize}
+All three options are independent, so that they can be set for a choice of eight total licenses, e.g. NC-D-Ledger means the license version that allows only Non-Commercial uses, allows Deriviative works, and makes the Ledger authoritative for the state of the license. Once an \iccclicense has been used on an NFT, that license stays with it. The licensor should not in general expect to be able to revoke the license or choose a different one.
+
+The rest of this document describes the design choices of the \iccclicense. Appendix \ref{sec:human} provides a short human-readable summary of the license terms. Appendix \ref{sec:text} contains the actual text of the license family; 
+
+
+\section{Design Goals}
+
 
 The \iccclicense has been specifically designed to work with blockchain-based NFTs, e.g. with smart contracts that implement the standard defined in \href{https://eips.ethereum.org/EIPS/eip-721}{EIP-721}. But it is not restricted to blockchain-based NFTs. The license uses the technology-neutral term ``Ledger'' to refer to the system that records information about NFTs and their owners. This could be a present-day blockchain, or another chain or system that could be created in the future. The license can be used with any underlying technology as long as it:
 \begin{enumerate}
@@ -54,9 +83,9 @@ The \iccclicense can be used with any smart contract or other technical process 
 
 \section{License Terms}
 
-The actual license grant is the least important part of the \iccclicense. We have tried to capture the most common and important use cases in light of the NFT community's responses to previous licenses. But our goal has been simplicity rather than perfection. We hope and expect that over time, others will build on and remix the ideas in the license to terms for more advanced use cases.
+We have tried in \iccclicense to capture the most common and important use cases in light of the NFT community's responses to previous licenses. But our goal has been simplicity rather than perfection. We hope and expect that over time, others will build on and remix the ideas in the license to terms for more advanced use cases.
 
-Drawing on the success of the Creative Commons license suite, the \iccclicense can be customized to be either Commercial or NonCommercial (C vs. NC), and to allow Derivative works or to specify No Derivative works (D vs. ND). These two options can be set independently, for a total of four variations. We did not include a Creative Commons-style ShareAlike option for derivative works. A licensor who is interested in establishing a shared pool of creative works should use an open license that lets anyone make derivative works (such as the CC BY-SA license or the GPL), rather than a license tied to an NFT.
+Drawing on the success of the Creative Commons license suite, the \iccclicense can be customized to be either \commercial or \noncommercial (C vs. NC), and to allow \derivative works or to specify \noderivative works (D vs. ND). These two options can be set independently. (A third variation, \ledger versus \legal, is discussed in \ref{sec:trans}.) We did not include a Creative Commons-style ShareAlike option for derivative works. A licensor who is interested in establishing a shared pool of creative works should use an open license that lets anyone make derivative works (such as the CC BY-SA license or the GPL), rather than a license tied to an NFT.
 
 The \iccclicense applies to ``Licensed Material'' that is ``Linked'' to an NFT. The definition of Licensed Material is deliberately broad: it can include highly creative works like images or videos, but it also includes ``other material'' to include datasets, software, or other works that are not primarily artistic. The definition of Linked is also broad: it can be by hyperlink, by description, by IPFS CID, by hash value, by an on-chain reference, etc.What is important is that the NFT must be connected to specific licensed material in a way that cannot change over time. We do not attempt to solve the (very difficult) problems of creating a technical standard or a license for an NFT whose contents can change over time.
 
@@ -64,9 +93,9 @@ The core license grant in the \iccclicense is that the NFT owner can ``Use'' the
 
 The license grant is non-exclusive. It is not currently possible to guarantee that only one NFT has been made of a work, or that there are no other off-chain uses of the work.
 
-If the license is NonCommercial, it excludes any uses directed to ``commercial advantage or monetary compensation,'' which includes any cases in which people are required to pay to get a copy of the work.  The definition of the NonCommercial license option specifically \emph{allows} the sale of the NFT itself. The resale of NFTs, like the resale of unique works of fine art, is a recognized and important use case. What the NonCommercial license option prohibits is the commercialization of the work by making and selling \emph{other} copies of the work, such as selling posters of an image attached to an NFT, or creating a video series based on a character depicted in a work associated with an NFT.
+If the license is \noncommercial, it excludes any uses directed to ``commercial advantage or monetary compensation,'' which includes any cases in which people are required to pay to get a copy of the work.  The definition of the \noncommercial license option specifically \emph{allows} the sale of the NFT itself. The resale of NFTs, like the resale of unique works of fine art, is a recognized and important use case. What the NonCommercial license option prohibits is the commercialization of the work by making and selling \emph{other} copies of the work, such as selling posters of an image attached to an NFT, or creating a video series based on a character depicted in a work associated with an NFT.
 
-Whether the license is Commercial or NonCommercial, no royalties are required. Under the Commercial license option, the NFT owner is allowed to keep all of their revenues from commercializing the work. Under the NonCommercial license option, such commercialization is not allowed at all, and constitutes a breach of the license allowing the licensor to sue for infringement. Royalties pose complicated computation and drafting problems, which we have not attempted to solve in the current draft. If a platform charges a fee for an NFT listing or sale, this is neither required nor prohibited by the \iccclicense; it is an issue between the NFT owner and the platform, not between the NFT owner and the licensor.  
+Whether the license is \commercial or \noncommercial, no royalties are required. Under the \commercial license option, the NFT owner is allowed to keep all of their revenues from commercializing the work. Under the \noncommercial license option, such commercialization is not allowed at all, and constitutes a breach of the license allowing the licensor to sue for infringement. Royalties pose complicated computation and drafting problems, which we have not attempted to solve in the current draft. If a platform charges a fee for an NFT listing or sale, this is neither required nor prohibited by the \iccclicense; it is an issue between the NFT owner and the platform, not between the NFT owner and the licensor.  
 
 Similarly, if the NFT owner sells the NFT, this is not an event that entitles the NFT owner to any royalties under the this license.  This does not prevent the \iccclicense from being used with a smart contract that requires royalty payments. We merely have not attempted to make payment of royalties part of the copyright license. For example, a smart contract could tie invocation of NFT transfer functions to payment of required royalties. (But see EIP-2981 (NFT Royalty Standard) for discussion of the reasons why such requirements may not  be effective in practice.) 
 
@@ -76,6 +105,7 @@ Regardless of which license option is used, all versions of the \iccclicense inc
 
 
 \section{Transfer}
+\label{sec:trans}
 
 The \iccclicense tries to deal sensibly with the many complications that can arise due to the unrestricted transferability of NFTs. Most existing NFT licenses have not taken this possibility seriously, even though it is arguably the defining characteristic of NFTs and the one that makes them most appealing to users.
 
@@ -84,7 +114,9 @@ The first major issue is that NFTs can be, and frequently are, stolen. A hacker 
 \item Many blockchain technologists believe that the first answer is obviously correct. The license follows whoever is the owner of the NFT according to the blockchain. The previous NFT owner's license terminates, and the new NFT owner receives a license. This approach makes the blockchain reliable, but it also makes it difficult for NFT owners to commercialize derivative works of their NFTs unless they take extreme security measures.
 \item Many lawyers believe that the second answer is obviously correct. The license stays with the true owner of the NFT according to property law. The previous NFT owner retains their copyright license, and the thief takes nothing. This approach protects NFT owners against theft, fraud, and duress, and makes the NFT copyright licensing more consistent with the rest of the legal system, but it makes the blockchain non-authoritative and can require additional investigation on the part of buyers and licensees.
 \end{itemize}
-This is an irreconcilable difference of views about how ledgers ought to operate, and a copyright license cannot resolve this deeper split of opinion within the NFT community. Instead, the \iccclicense provides both options, and the licensor can choose which one to use by choosing an appropriate variant of the license. The first option is called ``Authoritative,'' because it makes the ledger authoritative as to ownership. The second option is called called ``Non-Authoritative,'' because the ledger is not guaranteed to be authoritative; To keep the distinction clear, the license uses the term ``Controller'' for the person who has control of an NFT via a private key, and ``Owner'' for the person who is legally entitled to the license. Option (1) is implemented by defining the Owner to be the Controller (so the two concepts are the same), and option (2) by defining the Owner to be the "person or entity who is legally entitled to be its Controller." (In theory, it would be possible for a license to fine-tune the circumstances under which it does and does not transfer by stating its own rules, but at the cost of decreased compatibility with both the blockchain and with the legal system. The \iccclicense does not attempt this task.)
+This is an irreconcilable difference of views about how ledgers ought to operate, and a copyright license cannot resolve this deeper split of opinion within the NFT community. Instead, the \iccclicense provides both options, and the licensor can choose which one to use by choosing an appropriate variant of the license. The first option is called \ledger because it makes the ledger authoritative as to ownership. The second option is called called \legal because it makes the legal system authoritative as to ownership.
+ 
+ o keep the distinction clear, the license uses the term ``Controller'' for the person who has control of an NFT via a private key, and ``Owner'' for the person who is legally entitled to the license. The \ledger option is implemented by defining the Owner to be the Controller (so the two concepts are the same), and the \legal option by defining the Owner to be the "person or entity who is legally entitled to be its Controller." (In theory, it would be possible for a license to fine-tune the circumstances under which it does and does not transfer by stating its own rules, but at the cost of decreased compatibility with both the blockchain and with the legal system. The \iccclicense does not attempt this task.)
 
 \section{Revocation}
 
@@ -118,22 +150,23 @@ The \iccclicense includes a section advising courts on how to interpret it in th
 
 The severability clause and the disclaimer of warranties and limitation of liability are based on the text of the Creative Commons license suite. These licenses are also intended to create licenses in members of the public (including people who may be unknown to the licensor), so their use cases are broadly similar. Several other clauses and definitions, including disclaimer at the start of the license text, are also adapted from language used in the Creative Commons licenses.
 
-
+\appendix
 
 \section{Human-Readable Summary}
+\label{sec:human}
 
-This is a human-readable summary of the IC3 NFT [Derivatives | No Derivatives] [Commercial | Non-Commercial] [Authoritative | Non-Authoritative] License. It is not a substitute for the license, and you should carefully review the license to understand its terms and how they may apply to you.
+This is a human-readable summary of the IC3 NFT [\derivative | \noderivative] [\commercial | \noncommercial] [\ledger | \legal] License. It is not a substitute for the license, and you should carefully review the license to understand its terms and how they may apply to you.
 
 This license gives you the following rights to use a creative work associated with an NFT on a ledger (such as a blockchain): 
 
 \begin{itemize}
-\item \textbf{Use and Share}: You can make copies of the work, use them personally, and share them with others [If Non-Commercial:, but not for commercial purposes].
-\item {[}If Derivatives: \textbf{Derivatives}: you can make new works that include and build on the work, use them, and share them with others [If Non-Commercial:, but not for commercial purposes].]
+\item \textbf{Use and Share}: You can make copies of the work, use them personally, and share them with others [If \noncommercial:, but not for commercial purposes].
+\item {[}If \derivative: \textbf{Derivatives}: you can make new works that include and build on the work, use them, and share them with others [If \noncommercial:, but not for commercial purposes].]
 \item \textbf{Ownership}: You can use the work to show that you own the NFT.
 \item \textbf{Sale}: If you sell the NFT, you can use the work to show people what the NFT is.
 \end{itemize}
 
-You have these rights as long as you own the NFT, but when you sell or transfer the NFT, your rights will end and the new owner will have these rights instead. [If Authoritative: For purposes of this license, the owner of the NFT is whoever the ledger says owns it. This means that if the NFT is stolen, your rights under this license will pass to the new owner.] [If Non-Authoritative: For purposes of this license, the owner of the NFT is whoever the legal system says owns it. This means that if the NFT is stolen, you will retain your rights under this license.]
+You have these rights as long as you own the NFT, but when you sell or transfer the NFT, your rights will end and the new owner will have these rights instead. [If \ledger: For purposes of this license, the owner of the NFT is whoever the ledger says owns it. This means that if the NFT is stolen, your rights under this license will pass to the new owner.] [If \legal: For purposes of this license, the owner of the NFT is whoever the legal system says owns it. This means that if the NFT is stolen, you will retain your rights under this license.]
 
 Your rights to the work are not guaranteed to be exclusive. The copyright owner who made an NFT of the work may have the right to allow others to use the work, as well.
 
@@ -141,6 +174,7 @@ This license terminates if the technical process that created it says that it ha
 
 
 \section{License Text}
+\label{sec:text}
 
 \begin{sffamily} 
  
@@ -205,7 +239,7 @@ The \iccclicense (the ``License'') grants you certain intellectual property righ
 
 	\begin{itemize}
 	
-	\item	 The ``Owner'' of an NFT is [OPTION 1: the person or entity who is legally entitled to be its Controller.][OPTION 2: its Controller.]
+	\item	 The ``Owner'' of an NFT is [If \ledger: its Controller][If \legal: the person or entity who is legally entitled to be its Controller].
 		
 	\item	``You'' and ``Your'' refer to the person receiving rights under this License as the Owner of the License NFT.
 
@@ -223,8 +257,8 @@ The \iccclicense (the ``License'') grants you certain intellectual property righ
 
 Subject to the terms and conditions of this License, and for as for as long as You are the Owner of the License NFT, the Licensor hereby grants to You a worldwide, royalty-free, sublicensable, non-exclusive, license to exercise the Licensed Rights to:
 \begin{itemize}
-\item Use the Licensed Material [If Non-Commercial: for Non-Commercial purposes only],
-\item {[}If Derivatives: create and Use Adapted Material [If Non-Commercial: for Non-Commercial purposes only],]
+\item Use the Licensed Material [If \noncommercial: for Non-Commercial purposes only],
+\item {[}If \derivative: create and Use Adapted Material [If \noncommercial: for Non-Commercial purposes only],]
 \item Identify You as the Owner of the License NFT.
 \item Use the Licensed Material in connection with the sale and advertising for sale of the License NFT,
 \end{itemize}
