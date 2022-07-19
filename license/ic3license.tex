@@ -11,7 +11,7 @@
 
 \usepackage{xspace}
 
-\newcommand{\eiplicense}{EIP-5218\xspace}
+\newcommand{\eiplicense}{EIP-5222\xspace}
 \newcommand{\iccclicense}{IC3 NFT License\xspace}
 
 \newcommand{\keyword}[1]{\textbf{#1}\xspace}
@@ -29,6 +29,10 @@
 
 \newcommand{\sect}[1]{\vspace{12pt}\noindent{\strong{#1}}}
 \newcommand{\subsect}[1]{\vspace{12pt}\noindent{\em{#1}}}
+
+\usepackage{xcolor}
+\definecolor{light-gray}{gray}{0.95}
+\renewcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
 
 \begin{document}
 
@@ -87,7 +91,7 @@ We have tried in \iccclicense to capture the most common and important use cases
 
 Drawing on the success of the Creative Commons license suite, the \iccclicense can be customized to be either \commercial or \noncommercial (C vs. NC), and to allow \derivative works or to specify \noderivative works (D vs. ND). These two options can be set independently. (A third variation, \ledger versus \legal, is discussed in \ref{sec:trans}.) We did not include a Creative Commons-style ShareAlike option for derivative works. A licensor who is interested in establishing a shared pool of creative works should use an open license that lets anyone make derivative works (such as the CC BY-SA license or the GPL), rather than a license tied to an NFT.
 
-The \iccclicense applies to ``Licensed Material'' that is ``Linked'' to an NFT. The definition of Licensed Material is deliberately broad: it can include highly creative works like images or videos, but it also includes ``other material'' to include datasets, software, or other works that are not primarily artistic. The definition of Linked is also broad: it can be by hyperlink, by description, by IPFS CID, by hash value, by an on-chain reference, etc.What is important is that the NFT must be connected to specific licensed material in a way that cannot change over time. We do not attempt to solve the (very difficult) problems of creating a technical standard or a license for an NFT whose contents can change over time.
+The \iccclicense applies to ``Licensed Material'' that is ``Linked'' to an NFT. The definition of Licensed Material is deliberately broad: it can include highly creative works like images or videos, but it also includes ``other material'' to include datasets, software, or other works that are not primarily artistic. The definition of Linked is also broad: it can be by hyperlink, by description, by IPFS CID, by hash value, by an on-chain reference, etc. What is important is that the NFT must be connected to specific licensed material in a way that cannot change over time. We do not attempt to solve the (very difficult) problems of creating a technical standard or a license for an NFT whose contents can change over time.
 
 The core license grant in the \iccclicense is that the NFT owner can ``Use'' the licensed material, i.e. exercise all of the usual rights under copyright to make copies of the work and share them with the public. This is an unlimited grant: it covers all media, digital and analog, on-chain and off-chain. 
 
@@ -114,23 +118,24 @@ The first major issue is that NFTs can be, and frequently are, stolen. A hacker 
 \item Many blockchain technologists believe that the first answer is obviously correct. The license follows whoever is the owner of the NFT according to the blockchain. The previous NFT owner's license terminates, and the new NFT owner receives a license. This approach makes the blockchain reliable, but it also makes it difficult for NFT owners to commercialize derivative works of their NFTs unless they take extreme security measures.
 \item Many lawyers believe that the second answer is obviously correct. The license stays with the true owner of the NFT according to property law. The previous NFT owner retains their copyright license, and the thief takes nothing. This approach protects NFT owners against theft, fraud, and duress, and makes the NFT copyright licensing more consistent with the rest of the legal system, but it makes the blockchain non-authoritative and can require additional investigation on the part of buyers and licensees.
 \end{itemize}
+
 This is an irreconcilable difference of views about how ledgers ought to operate, and a copyright license cannot resolve this deeper split of opinion within the NFT community. Instead, the \iccclicense provides both options, and the licensor can choose which one to use by choosing an appropriate variant of the license. The first option is called \ledger because it makes the ledger authoritative as to ownership. The second option is called called \legal because it makes the legal system authoritative as to ownership.
  
- o keep the distinction clear, the license uses the term ``Controller'' for the person who has control of an NFT via a private key, and ``Owner'' for the person who is legally entitled to the license. The \ledger option is implemented by defining the Owner to be the Controller (so the two concepts are the same), and the \legal option by defining the Owner to be the "person or entity who is legally entitled to be its Controller." (In theory, it would be possible for a license to fine-tune the circumstances under which it does and does not transfer by stating its own rules, but at the cost of decreased compatibility with both the blockchain and with the legal system. The \iccclicense does not attempt this task.)
+To keep the distinction clear, the license uses the term ``Controller'' for the person who has control of an NFT via a private key, and ``Owner'' for the person who is legally entitled to the license. The \ledger option is implemented by defining the Owner to be the Controller (so the two concepts are the same), and the \legal option by defining the Owner to be the "person or entity who is legally entitled to be its Controller." (In theory, it would be possible for a license to fine-tune the circumstances under which it does and does not transfer by stating its own rules, but at the cost of decreased compatibility with both the blockchain and with the legal system. The \iccclicense does not attempt this task.)
 
 \section{Revocation}
 
 The \iccclicense can be revoked, but it does not define the conditions under which it can be. This may seem paradoxical, but it reflects the design goal of making the license itself simple and modular. Instead, the license \emph{defers} to the smart contract that invoked it in the first place. If that contract says that the license has been revoked, it has been. 
 
-The reasoning for this design choice can be illustrated by considering the \eiplicense interface, which defines a generic \texttt{revokeLicense()} method that can be called by a `\texttt{\_revoker}`` address designated by the creator of the license. Thus, the following are all possible:
+The reasoning for this design choice can be illustrated by considering the \eiplicense interface, which defines a generic \code{revokeLicense()} method that can be called by a \code{\_revoker} address designated by the creator of the license. Thus, the following are all possible:
 \begin{itemize}
-\item The `\texttt{\_revoker}`` is the licensor. The license can be freely revoked at any time.
-\item The `\texttt{\_revoker}`` is the licensee. The license can only be revoked with the consent of the licensee.
-\item The `\texttt{\_revoker}`` is the zero address. The license is irrevocable.
-\item The `\texttt{\_revoker}`` is a smart contract which can be invoked to call the `revokeLicense()` method after the passage of 30 days from the time the license is issued. The license is for a limited time.
-\item The `\texttt{\_revoker}`` is a smart contract which can be invoked to call the `revokeLicense()` method upon the payment of a specified amount to the licensee. The licensor has an option to buy out the licensee.
+\item The \code{\_revoker} is the licensor. The license can be freely revoked at any time.
+\item The \code{\_revoker} is the licensee. The license can only be revoked with the consent of the licensee.
+\item The \code{\_revoker} is the zero address. The license is irrevocable.
+\item The \code{\_revoker} is a smart contract which can be invoked to call the \eiplicense \code{revokeLicense()} method after the passage of 30 days from the time the license is issued. The license is for a limited time.
+\item The \code{\_revoker} is a smart contract which can be invoked to call the \eiplicense \code{revokeLicense()} method upon the payment of a specified amount to the licensee. The licensor has an option to buy out the licensee.
 \end{itemize}
-In other words, the \eiplicense is completely generic in supporting arbitrary licensing logic, and because the the \iccclicense defers to the Licensing Process (e.g., smart contract), it is also completely generic. Once again, the license is designed to work with the \eiplicense interface, but it is drafted so that any technical process serving the same function can be used instead.
+In other words, the \eiplicense is completely generic in supporting arbitrary licensing logic, and because the \iccclicense defers to the Licensing Process (e.g., smart contract), it is also completely generic. Once again, the license is designed to work with the \eiplicense interface, but it is drafted so that any technical process serving the same function can be used instead.
 
 \section{Sublicensing}
 
@@ -178,7 +183,7 @@ This license terminates if the technical process that created it says that it ha
 
 \begin{sffamily} 
  
-\emph{The Institute for Cryptocurrencies and Contracts (IC3) is not a law firm and does not provide legal services or legal advice. Publication of the text of the \iccclicense does not create a lawyer-client or other relationship. IC3 makes this text and related information available on an “as-is” basis. IC3 gives no warranties regarding this license, any material licensed under its terms and conditions, or any related information. IC3 disclaims all liability for damages resulting from their use to the fullest extent possible.}\\\\
+\emph{The Initiative for Cryptocurrencies and Contracts (IC3) is not a law firm and does not provide legal services or legal advice. Publication of the text of the \iccclicense does not create a lawyer-client or other relationship. IC3 makes this text and related information available on an “as-is” basis. IC3 gives no warranties regarding this license, any material licensed under its terms and conditions, or any related information. IC3 disclaims all liability for damages resulting from their use to the fullest extent possible.}\\\\
 The \iccclicense (the ``License'') grants you certain intellectual property rights with respect to Licensed Material associated with an NFT. When you acquire the NFT, you own the personal property rights to the token underlying the NFT (e.g., the right to freely sell, transfer, or otherwise dispose of that  NFT), but you do not own the associated Licensed Material. Instead, the Licensor grants you a specified limited license to use the Licensed Material, as set forth below:
 
 \sect{Definitions}
@@ -255,10 +260,11 @@ The \iccclicense (the ``License'') grants you certain intellectual property righ
 
 \sect{License Grant}
 
-Subject to the terms and conditions of this License, and for as for as long as You are the Owner of the License NFT, the Licensor hereby grants to You a worldwide, royalty-free, sublicensable, non-exclusive, license to exercise the Licensed Rights to:
-\begin{itemize}
+Subject to the terms and conditions of this License, and for as long as You are the Owner of the License NFT, the Licensor hereby grants to You a worldwide, royalty-free, sublicensable, non-exclusive, license to exercise the Licensed Rights to:
 \item Use the Licensed Material [If \noncommercial: for Non-Commercial purposes only],
 \item {[}If \derivative: create and Use Adapted Material [If \noncommercial: for Non-Commercial purposes only],]
+\item Use the Licensed Material [If Non-Commercial: for Non-Commercial purposes only],
+\item {[}If Derivatives: Create and Use Adapted Material [If Non-Commercial: for Non-Commercial purposes only],]
 \item Identify You as the Owner of the License NFT.
 \item Use the Licensed Material in connection with the sale and advertising for sale of the License NFT,
 \end{itemize}
