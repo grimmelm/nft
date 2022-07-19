@@ -21,6 +21,9 @@
 \definecolor{light-gray}{gray}{0.95}
 \renewcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
 
+\newcommand{\licenseoption}[1]{{\color{cyan}{#1}}}
+\newcommand{\iflicenseoption}[2]{[\colorbox{light-gray}{If \licenseoption{#1}:} #2]}
+
 \begin{document}
 
 \maketitle
@@ -126,18 +129,18 @@ The severability clause and the disclaimer of warranties and limitation of liabi
 
 \section{Human-Readable Summary}
 
-This is a human-readable summary of the IC3 NFT [Derivatives | No Derivatives] [Commercial | Non-Commercial] [Authoritative | Non-Authoritative] License. It is not a substitute for the license, and you should carefully review the license to understand its terms and how they may apply to you.
+This is a human-readable summary of the IC3 NFT [\licenseoption{Derivatives}{} | \licenseoption{No Derivatives}{}] [\licenseoption{Commercial}{} | \licenseoption{Non-Commercial}{}] [\licenseoption{Authoritative}{} | \licenseoption{Non-Authoritative}{}] License. It is not a substitute for the license, and you should carefully review the license to understand its terms and how they may apply to you.
 
 This license gives you the following rights to use a creative work associated with an NFT on a ledger (such as a blockchain): 
 
 \begin{itemize}
-\item \textbf{Use and Share}: You can make copies of the work, use them personally, and share them with others [If Non-Commercial:, but not for commercial purposes].
-\item {[}If Derivatives: \textbf{Derivatives}: you can make new works that include and build on the work, use them, and share them with others [If Non-Commercial:, but not for commercial purposes].]
+\item \textbf{Use and Share}: You can make copies of the work, use them personally, and share them with others \iflicenseoption{Non-Commercial}{, but not for commercial purposes}.
+\item \iflicenseoption{Derivatives}{\textbf{Derivatives}: you can make new works that include and build on the work, use them, and share them with others \iflicenseoption{Non-Commercial}{, but not for commercial purposes}.}
 \item \textbf{Ownership}: You can use the work to show that you own the NFT.
 \item \textbf{Sale}: If you sell the NFT, you can use the work to show people what the NFT is.
 \end{itemize}
 
-You have these rights as long as you own the NFT, but when you sell or transfer the NFT, your rights will end and the new owner will have these rights instead. [If Authoritative: For purposes of this license, the owner of the NFT is whoever the ledger says owns it. This means that if the NFT is stolen, your rights under this license will pass to the new owner.] [If Non-Authoritative: For purposes of this license, the owner of the NFT is whoever the legal system says owns it. This means that if the NFT is stolen, you will retain your rights under this license.]
+You have these rights as long as you own the NFT, but when you sell or transfer the NFT, your rights will end and the new owner will have these rights instead. \iflicenseoption{Authoritative}{For purposes of this license, the owner of the NFT is whoever the ledger says owns it. This means that if the NFT is stolen, your rights under this license will pass to the new owner.} \iflicenseoption{Non-Authoritative}{For purposes of this license, the owner of the NFT is whoever the legal system says owns it. This means that if the NFT is stolen, you will retain your rights under this license.}
 
 Your rights to the work are not guaranteed to be exclusive. The copyright owner who made an NFT of the work may have the right to allow others to use the work, as well.
 
@@ -209,7 +212,7 @@ The \iccclicense (the ``License'') grants you certain intellectual property righ
 
 	\begin{itemize}
 	
-	\item	 The ``Owner'' of an NFT is [OPTION 1: the person or entity who is legally entitled to be its Controller.][OPTION 2: its Controller.]
+	\item	 The ``Owner'' of an NFT is \iflicenseoption{Non-Authoritative}{the person or entity who is legally entitled to be its Controller.} \iflicenseoption{Authoritative}{its Controller.}
 		
 	\item	``You'' and ``Your'' refer to the person receiving rights under this License as the Owner of the License NFT.
 
@@ -227,9 +230,9 @@ The \iccclicense (the ``License'') grants you certain intellectual property righ
 
 Subject to the terms and conditions of this License, and for as long as You are the Owner of the License NFT, the Licensor hereby grants to You a worldwide, royalty-free, sublicensable, non-exclusive, license to exercise the Licensed Rights to:
 \begin{itemize}
-\item Use the Licensed Material [If Non-Commercial: for Non-Commercial purposes only],
-\item {[}If Derivatives: Create and Use Adapted Material [If Non-Commercial: for Non-Commercial purposes only],]
-\item Identify You as the Owner of the License NFT.
+\item Use the Licensed Material \iflicenseoption{Non-Commercial}{for Non-Commercial purposes only},
+\item \iflicenseoption{Derivatives}{Create and Use Adapted Material \iflicenseoption{Non-Commercial}{for Non-Commercial purposes only},}
+\item Identify You as the Owner of the License NFT,
 \item Use the Licensed Material in connection with the sale and advertising for sale of the License NFT,
 \end{itemize}
 This License becomes effective when the Licensor causes the License NFT to Invoke it. Because this is a unilateral license grant and not a contract, Your assent is not required for it to become effective.
