@@ -16,14 +16,22 @@
 
 \newcommand{\keyword}[1]{\textbf{#1}\xspace}
 
+\newcommand{\publiclicense}{\keyword{Public-License}}
+\newcommand{\nopubliclicense}{\keyword{No-Public-License}}
+
 \newcommand{\commercial}{\keyword{Commercial}}
 \newcommand{\noncommercial}{\keyword{Non-Commercial}}
 
 \newcommand{\derivative}{\keyword{Derivatives}}
+\newcommand{\sharealike}{\keyword{Share-Alike}}
 \newcommand{\noderivative}{\keyword{No-Derivatives}}
 
 \newcommand{\ledger}{\keyword{Ledger-Authoritative}}
 \newcommand{\legal}{\keyword{Legal-Authoritative}}
+
+\newcommand{\personal}{\keyword{Personal}}
+\newcommand{\conditional}{\keyword{Conditional}}
+
 
 \usepackage{semantic-markup}
 
@@ -201,11 +209,16 @@ The \iccclicense (the ``License'') grants you certain intellectual property righ
 		
 	\item	A ``Ledger'' is a blockchain, database, or other digital system that records information about Unique Identifiers.
 		
+	\item	An ``NFT'' is a Unique Identifier in a Ledger.
+		
 	\item	A ``Private Key'' is a cryptographic key, the use of which is necessary to modify the information about a Unique Identifier recorded in a Ledger.
 		
-	\item	An ``NFT'' is a Unique Identifier in a Ledger that is Associated with a person or entity when that person or entity has substantially exclusive control over the Private Key necessary to modify the information about that Unique Identifier in that Ledger.
+	\item An NFT  is ``Associated'' with a person or entity when that person or entity has substantially exclusive control over the Private Key necessary to modify the information about that Unique Identifier in that Ledger.
 		
-	\item	The ``Controller'' of an NFT is the person or entity with whom the NFT is Associated.
+	\item The ``Controller'' of an NFT is the person or entity with whom the NFT is Associated.
+	
+	\item An ``NFT Generator'' is a smart contract, function, or other service that creates NFTs in a Ledger.
+
 	\end{itemize}
 
 	\subsect{Licensing}
@@ -257,28 +270,36 @@ The \iccclicense (the ``License'') grants you certain intellectual property righ
 
 	\item	An NFT is ``Sublicensed'' when the NFT indicates that it has been sublicensed by means of a Licensing Process.
 
+	\item 	\iflicenseoption{\sharealike}{Adapted Material is ``Share-Alike Sublicensed'' from an NFT (the ``Parent NFT'') when the Parent NFT is Sublicensed by means of a Licensing Process that (1) creates another NFT (the ``Child NFT'') by means of the same NFT Generator that created the Parent NFT, (2) causes the Child NFT to be Linked to Adapted Material, and (3) causes the Child NFT to Invoke this license, provided that the Child NFT and Parent NFT have materially the same properties and functionality, except for the identity of the parties they are Associated with and the identity of the material they are Linked to.}
+
 	\item	To ``Transfer'' an NFT is to change, modify, or update the Ledger such that the identity of the Owner of that NFT changes, by any legally sufficient means, including sale, barter, gift, bequest, or operation of law. 
+	
+	\item ``Grace Period'' means 
 	
 	\end{itemize}
 
 
+\sect{Public License Grant}
 
-\sect{License Grant}
+\iflicenseoption{\publiclicense}{The Licensed Material is made available to the public under the terms of the Creative Commons Attribution-NoDerivatives 4.0 International Public License at \href{https://creativecommons.org/licenses/by-nd/4.0/legalcode}{https://creativecommons.org/licenses/by-nd/4.0/legalcode}.}
 
-Subject to the terms and conditions of this License, and for as long as You are the Owner of the License NFT, the Licensor hereby grants to You a worldwide, royalty-free, sublicensable, non-exclusive, license to exercise the Licensed Rights to:
+\sect{NFT License Grant}
+
+Subject to the terms and conditions of this License, and \iflicenseoption{\personal}{for as long as}\iflicenseoption{\conditional}{on the condition that} You are the Owner of the License NFT, the Licensor hereby grants to You a worldwide, royalty-free, sublicensable, non-exclusive, license to exercise the Licensed Rights to:
 \begin{itemize}
 \item Use the Licensed Material \iflicenseoption{\noncommercial}{for Non-Commercial purposes only},
 \item \iflicenseoption{\derivative}{Create and Use Adapted Material \iflicenseoption{\noncommercial}{for Non-Commercial purposes only},}
+\item \iflicenseoption{\sharealike}{Create and Use Adapted Material \iflicenseoption{\noncommercial}{for Non-Commercial purposes only}, provided that the Adapted Material is Share-Alike Sublicensed from the License NFT,}
 \item Identify You as the Owner of the License NFT,
 \item Use the Licensed Material in connection with the sale and advertising for sale of the License NFT,
 \end{itemize}
-This License becomes effective when the Licensor causes the License NFT to Invoke it. Because this is a unilateral license grant and not a contract, Your assent is not required for it to become effective.
+This License becomes effective when the Licensor causes the License NFT to Invoke it. Because this is a unilateral license grant and not a contract, Your assent is not required for it to become effective. \iflicenseoption{\publiclicense}{This license grant is in addition to any rights granted to You as a member of the public under the terms of the Public License Grant above.}
 
 All rights granted under this License last for the full duration of the Licensor's Licensed Rights, except that if the License NFT Revokes this License, Your rights under this license grant will terminate, along with all sublicenses granted hereunder. 
 
-This license grant is non-transferable, except that if the License NFT is Transferred, Your rights under this license grant will terminate, and such rights will automatically transfer to the new Owner of the License NFT. Any sublicenses granted hereunder that are Sublicensed will continue in force as sublicenses from the new Owner. If You have become the Owner of the License NFT as a result of a Transfer, you automatically grant any such sublicenses that are Sublicensed. This License does not by itself require you to continue or grant any sublicenses given by a previous Owner that were not Sublicensed, but it does not prohibit other law from doing so.
+This license grant is non-transferable. If the License NFT is Transferred such that You are no longer the Owner, Your rights under this license grant will terminate. Notwithstanding the previous sentence, You may continue to Use the Licensed Material and any already-existing Adapted Material under the terms of the license grant above for the duration of the Grace Period. You may not Create or Use new Adapted Material or grant new sublicenses during the Grace Period.
 
-
+If the License NFT is Transferred, any sublicenses granted hereunder that are Sublicensed will continue in force as sublicenses from the new Owner. If You have become the Owner of the License NFT as a result of a Transfer, you automatically grant any such sublicenses that are Sublicensed. This License does not by itself require you to continue or grant any sublicenses given by a previous Owner that were not Sublicensed, but it does not prohibit other law from doing so.
 
 
 \sect{Interpretation}
