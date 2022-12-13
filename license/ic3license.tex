@@ -5,14 +5,13 @@
 \usepackage{authblk}
 
 \title{The \iccclicense\\}
-\author{James Grimmelmann}
-\affil{Cornell Tech and Cornell Law School\\Institute for Cryptocurrencies and Contracts}
+\author{The Institute for Cryptocurrencies and Contracts (IC3) \and The Coalition of Automated Legal Applications (COALA)}
 \date{Version 1.0\\\today}
 
 \usepackage{xspace}
 
 \newcommand{\eiplicense}{EIP-5218\xspace}
-\newcommand{\iccclicense}{IC3 NFT License\xspace}
+\newcommand{\iccclicense}{Token-Bound NFT License\xspace}
 
 \newcommand{\keyword}[1]{\textbf{#1}\xspace}
 
@@ -22,10 +21,10 @@
 \newcommand{\commercial}{\keyword{Commercial}}
 \newcommand{\noncommercial}{\keyword{Non-Commercial}}
 
-\newcommand{\derivative}{\keyword{Derivatives}}
-\newcommand{\sharealike}{\keyword{Share-Alike}}
-\newcommand{\derivativetracking}{\keyword{Derivative-Tracking}}
 \newcommand{\noderivative}{\keyword{No-Derivatives}}
+\newcommand{\derivative}{\keyword{Derivatives}}
+\newcommand{\derivativetracking}{\keyword{Derivatives-NFT}}
+\newcommand{\sharealike}{\keyword{Derivatives-NFT-Share-Alike}}
 
 \newcommand{\ledger}{\keyword{Ledger-Authoritative}}
 \newcommand{\legal}{\keyword{Legal-Authoritative}}
@@ -62,11 +61,13 @@ The \iccclicense is a copyright license specifically designed for use with NFTs.
 The \iccclicense has four optional features that a licensor can use or not when choosing a license:
 \begin{itemize}
 \item The license can be \commercial (C) or \noncommercial (NC). A \commercial license allows the user to make money from merchandise and other uses of the work; a \noncommercial license does not.
-\item The license can be \derivative (D), \derivativetracking (DT), \sharealike (SA), or \noderivative (ND). A \derivative license allows the user to make derivative works and adaptations (like remixes and videos) without restriction. A \derivativetracking license allows derivative works but requires them to be registered and tracked as NFTs themselves. A \sharealike license is like \derivativetracking but also requires that the derivative works be relicensed under the same license. And a \noderivative license prohibits derivative works entirely. (These options are ordered from least restrictive to most restrictive.)
+\item The license can be \derivative (D), \derivativetracking (DT), \sharealike (DTSA), or \noderivative (ND). A \derivative license allows the user to make derivative works and adaptations (like remixes and videos) without restriction. A \derivativetracking license allows derivative works but requires them to be registered and tracked as NFTs themselves. A \sharealike license is like \derivativetracking but also requires that the derivative works be relicensed under the same license. And a \noderivative license prohibits derivative works entirely. (These options are ordered from least restrictive to most restrictive.)
 \item The license can be \publiclicense (PL) or \nopubliclicense (NPL). A \publiclicense license, in addition to the specific rights granted to the user, grants to the public a broad copyright license to reproduce the work (but not to make derivative works). A \nopubliclicense license grants only the specific rights to the user.
-\item The license can be \ledger (Ledger) or \legal (Legal). A \ledger license means that the current state of the blockchain ledger is always authoritative for who owns the NFT and has rights under the license, even if the NFT is stolen or transferred by mistake. A \legal license gives the courts flexibility to correct ownership of the license in clear cases of theft and fraud.
+\item The license can be \ledger (Ledger) or \legal (Legal). A \ledger license means that the current state of the blockchain ledger is always authoritative for who owns the NFT and has rights under the license, even if the NFT is stolen or transferred by mistake. A \legal license gives the courts flexibility to correct ownership of the license in clear cases of theft and fraud. 
 \end{itemize}
 All four options are independent, so that they can be set for a choice of thirty-two total licenses, e.g. NC-D-NPL-Ledger means the license version that allows only Non-Commercial uses, allows Derivative works, includes No Public License, and makes the Ledger authoritative for the state of the license. Once an \iccclicense has been used on an NFT, that license stays with it. The licensor should not expect to be able to choose a different license after the initial release.
+
+The simplest combination of license options is C-D-NPL-Ledger, which provides a straightforward license that gives the current owner of the NFT (as defined by the blockchain) full rights over the associated work. This is the default \iccclicense; the other license options can be thought of as variations on it.
 
 The rest of this document describes the design choices of the \iccclicense. Appendix \ref{sec:human} provides a short human-readable summary of the license terms. Appendix \ref{sec:text} contains the actual text of the license family.
 
@@ -135,15 +136,17 @@ Similarly, if the NFT owner sells the NFT, this is not an event that entitles th
 
 If the licensor chooses to allow derivative works with \derivative, \derivativetracking, or \sharealike, the license grant also allows the NFT owner to use ``Adapted Material,'' which uses language from the Creative Commons license suite to define what counts as a derivative work. To reflect the customs of the NFT community, we added language to make clear that simply reproducing the work in a different medium -- e.g., printing T-shirts of a JPEG -- doesn't count as making a derivative work. Only new projects -- such as modifying artwork, remixing a song, or making a TV series based on a character -- are derivative works.
 
-When the license requires \derivativetracking or \sharealike, the grant of permission to make derivative works is conditional on creating an NFT for the derivative work that has the same functionality as the underlying work. These two options implement a \emph{technical} compatibility condition, one that aims to keep derivative works on the same technical standard as the NFT itself. The license is platform-agnostic, so it can be used with different smart contracts, different blockchains, and even non-blockchain systems. The point is simply that when one of these license options is selected, the derivative-work NFTs will live in the same ecosystem used for the NFT.
+The options to enable derivative works are cumulative: \derivative enables the creation of derivative works in all circumstances, \derivativetracking includes the derivative conditions, and introduces additional requirements concerning the technical properties of the NFT associated with the derivative work; and \sharealike includes all of the above conditions, and introduces an additional requirement concerning the legal licensing terms of the derivative work.
 
-When the license requires \sharealike, the requirement of using the same technical mechanism is supplemented with the further requirement that the derivative-work NFT be licensed using the same license. This is a \emph{legal} compatibility condition; it closely corresponds to the Share-Alike license option in the Creative Commons license suite. Note that \sharealike implies \derivativetracking. In the context of NFTs, the point of a Share-Alike license could be defeated by tying the license to a derivative-work NFT whose technical implementation departed too significantly from the implementation of the underlying NFT. Rather than try to prohibit the use of what the Creative Commons suite calls ``Effective Technical Measures'' and take on the difficult task of defining them in the context of NFTs, we have chosen simply to require use of the same implementation for the derivative-work NFT, on the theory that the original NFT creator can choose an appropriate implementation at the time of minting.
+When the license requires \derivativetracking, the grant of permission to make derivative works is conditional on creating an NFT for the derivative work that (1) subsists on the same ledger as the original NFT; (2) has materially the same properties and functionality as the original NFT; (3) causes the derivative NFT to reference the original NFT in such a way as to ensure that for each NFT, it is technically straightforward to identify all of its derivative NFTs. These two options implement a \emph{technical} compatibility condition, one that aims to keep derivative works on the \emph{same technical standard} and on the \emph{same ledger} as the original NFT. 
+
+When the license requires Share-Alike, the requirement of using the same technical mechanism (as prescribed by \derivativetracking) is supplemented with the further requirement that the derivative work be licensed using the same licensing terms. This is a \emph{legal compatibility} condition; it closely corresponds to the Share-Alike license option in the Creative Commons license suite. Note that \sharealike implies \derivativetracking because in the context of NFTs, the point of a Share-Alike license could be defeated by tying the license to a derivative-work NFT whose technical implementation departed too significantly from the implementation of the underlying NFT. This means that not only must the NFT associated with the derivative work implement the same technical standards, but it must also adopt the same properties and parameters as the original-work NFT in order to comply with the terms of the legal license.
 
 \subsection{Public Licenses}
 
 One common use case for NFTs is to reserve a few privileges for the NFT owner while giving the public a license to use the creative work associated with the NFT. This could be accomplished through dual licensing, in which the creator explicitly uses one license for the NFT owner and another for the public. But this approach is unsatisfactory; dual licensing gives up some of the convenience and clarity of having all of the relevant license terms clearly located in one place. Nor is it appropriate to include a public license in every version of the NFT license. The public-license model for NFTs is not universal; many NFTs give rights in the creative work only to the NFT owner.
 
-Thus, the IC3 NFT License includes a public license as a license option. When \publiclicense is selected, the license grants described above, which give specific broad rights to the NFT owner, are accompanied by a public license grant (specifically, a Creative Commons Attribution-NoDerivatives license) that gives the public the right to use the work, but not to make derivative works.
+Thus, the \iccclicense includes a public license as a license option. When \publiclicense is selected, the license grants described above, which give specific broad rights to the NFT owner, are accompanied by a public license grant (specifically, a Creative Commons Attribution-NoDerivatives license) that gives the public the right to use the work, but not to make derivative works.
 
 
 
@@ -201,7 +204,7 @@ The severability clause and the disclaimer of warranties and limitation of liabi
 \section{Human-Readable Summary}
 \label{sec:human}
 
-This is a human-readable summary of the IC3 NFT [\commercial{} | \noncommercial{}] [\derivative{} | \derivativetracking{} | \sharealike{} | \noderivative{}]  [\publiclicense{} | \nopubliclicense{}] [\ledger{} | \legal{}] License. It is not a substitute for the license, and you should carefully review the license to understand its terms and how they may apply to you.
+This is a human-readable summary of the Token-Bound NFT [\commercial{} | \noncommercial{}] [\derivative{} | \derivativetracking{} | \sharealike{} | \noderivative{}]  [\publiclicense{} | \nopubliclicense{}] [\ledger{} | \legal{}] License. It is not a substitute for the license, and you should carefully review the license to understand its terms and how they may apply to you.
 
 This license gives you the following rights to use a creative work associated with an NFT on a ledger (such as a blockchain): 
 
@@ -226,7 +229,7 @@ This license terminates if the technical process that created it says that it ha
 
 \begin{sffamily} 
  
-\emph{The Initiative for Cryptocurrencies and Contracts (IC3) is not a law firm and does not provide legal services or legal advice. Publication of the text of the \iccclicense does not create a lawyer-client or other relationship. IC3 makes this text and related information available on an ``as-is'' basis. IC3 gives no warranties regarding this license, any material licensed under its terms and conditions, or any related information. IC3 disclaims all liability for damages resulting from their use to the fullest extent possible.}\\\\
+\emph{The Initiative for Cryptocurrencies and Contracts (IC3) and Coalition of Automated Legal Applications (COALA) are not law firms and do not provide legal services or legal advice. Publication of the text of the \iccclicense does not create a lawyer-client or other relationship. IC3 and COALA make this text and related information available on an ``as-is'' basis. IC3 and COALA give no warranties regarding this license, any material licensed under its terms and conditions, or any related information. IC3 and COALA disclaim all liability for damages resulting from their use to the fullest extent possible.}\\\\
 The \iccclicense (the ``License'') grants you certain intellectual property rights with respect to Licensed Material associated with an NFT. When you acquire the NFT, you own the personal property rights to the token underlying the NFT (e.g., the right to freely sell, transfer, or otherwise dispose of that  NFT), but you do not own the associated Licensed Material. Instead, the Licensor grants you a specified limited license to use the Licensed Material, as set forth below:
 
 \sect{Definitions}
