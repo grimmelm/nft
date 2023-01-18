@@ -138,7 +138,7 @@ If the licensor chooses to allow derivative works with \derivative, \derivativet
 
 The options to enable derivative works are cumulative: \derivative enables the creation of derivative works in all circumstances, \derivativetracking includes the derivative conditions, and introduces additional requirements concerning the technical properties of the NFT associated with the derivative work; and \sharealike includes all of the above conditions, and introduces an additional requirement concerning the legal licensing terms of the derivative work.
 
-When the license requires \derivativetracking, the grant of permission to make derivative works is conditional on creating an NFT for the derivative work that (1) subsists on the same ledger as the original NFT; (2) has materially the same properties and functionality as the original NFT; (3) causes the derivative NFT to reference the original NFT in such a way as to ensure that for each NFT, it is technically straightforward to identify all of its derivative NFTs. These two options implement a \emph{technical} compatibility condition, one that aims to keep derivative works on the \emph{same technical standard} and on the \emph{same ledger} as the original NFT. 
+When the license requires \derivativetracking, the grant of permission to make derivative works is conditional on creating an NFT for the derivative work that (1) subsists on the same ledger as the original NFT; (2) has materially the same properties and functionality as the original NFT; (3) causes the derivative NFT to reference the original NFT in such a way as to ensure that for each NFT, it is technically straightforward to identify all of its derivative NFTs. This option implements a \emph{technical} compatibility condition, one that aims to keep derivative works on the \emph{same technical standard} and on the \emph{same ledger} as the original NFT. 
 
 When the license requires Share-Alike, the requirement of using the same technical mechanism (as prescribed by \derivativetracking) is supplemented with the further requirement that the derivative work be licensed using the same licensing terms. This is a \emph{legal compatibility} condition; it closely corresponds to the Share-Alike license option in the Creative Commons license suite. Note that \sharealike implies \derivativetracking because in the context of NFTs, the point of a Share-Alike license could be defeated by tying the license to a derivative-work NFT whose technical implementation departed too significantly from the implementation of the underlying NFT. This means that not only must the NFT associated with the derivative work implement the same technical standards, but it must also adopt the same properties and parameters as the original-work NFT in order to comply with the terms of the legal license.
 
@@ -173,10 +173,10 @@ The \iccclicense can be revoked, but it does not define the conditions of revoca
 
 The reasoning for this design choice can be illustrated by considering the \eiplicense interface, which defines a generic \code{revokeLicense()} method that can be called by a \code{\_revoker} address designated by the creator of the license. Thus, the following are all possible:
 \begin{itemize}
-\item The \code{\_revoker} is the licensor. The license can be freely revoked at any time.
+\item The \code{\_revoker} is the licensor. The license can only be revoked with the consent of the licensor.
 \item The \code{\_revoker} is the licensee. The license can only be revoked with the consent of the licensee.
 \item The \code{\_revoker} is the zero address. The license is irrevocable.
-\item The \code{\_revoker} is a smart contract which can be invoked to call the \eiplicense \code{revokeLicense()} method after the passage of 30 days from the time the license is issued. The license is for a limited time.
+\item The \code{\_revoker} is a smart contract which can be invoked by anyone to call the \eiplicense \code{revokeLicense()} method after the passage of 30 days from the time the license is issued. The license is for a limited time.
 \item The \code{\_revoker} is a smart contract which can be invoked to call the \eiplicense \code{revokeLicense()} method upon the payment of a specified amount to the licensee. The licensor has an option to buy out the licensee.
 \end{itemize}
 In other words, the \eiplicense is completely generic in supporting arbitrary licensing logic, and because the \iccclicense defers to the Licensing Process (e.g., smart contract), it is also completely generic. Once again, the license is designed to work with the \eiplicense interface, but it is drafted so that any technical process serving the same function can be used instead.
@@ -210,7 +210,7 @@ This license gives you the following rights to use a creative work associated wi
 
 \begin{itemize}
 \item \textbf{Use and Share}: You can make copies of the work, use them personally, and share them with others \iflicenseoption{\noncommercial}{, but not for commercial purposes}.
-\item \ifnotlicenseoption{\noderivative}{\textbf{Derivatives}: you can make new works that include and build on the work, use them, and share them with others \iflicenseoption{\noncommercial}{, but not for commercial purposes} \iflicenseoption{\derivativetracking}{, provided that you also release them as NFTs} \iflicenseoption{\sharealike}{, provided that you also release them as NFTs under the same license}.}
+\item \ifnotlicenseoption{\noderivative}{\textbf{Derivatives}: you can make new works that include and build on the work, use them, and share them with others \iflicenseoption{\noncommercial}{, but not for commercial purposes} \iflicenseoption{\derivativetracking}{, provided that you also release them as NFTs using the same technical standard and on the same ledger as the original NFT \iflicenseoption{\sharealike}{under the same license}}.}
 \item \textbf{Ownership}: You can use the work to show that you own the NFT.
 \item \textbf{Sale}: If you sell the NFT, you can use the work to show people what the NFT is.
 \end{itemize}
